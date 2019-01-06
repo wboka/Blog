@@ -35,12 +35,7 @@ module.exports = {
 							height: 400
 						}
 					},
-					{
-						resolve: `gatsby-remark-prismjs`,
-						options: {
-							showLineNumbers: true
-						}
-					}
+					`gatsby-remark-prismjs`,
 				]
 			}
 		},

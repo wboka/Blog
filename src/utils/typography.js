@@ -1,7 +1,7 @@
 import Typography from "typography";
-import fairyGateTheme from "typography-theme-fairy-gates";
+import typographyTheme from "typography-theme-fairy-gates";
 
-const typography = new Typography(fairyGateTheme);
+const typography = new Typography(typographyTheme);
 
 export default typography;
 export const rhythm = typography.rhythm;

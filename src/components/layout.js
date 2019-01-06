@@ -5,8 +5,6 @@ import { StaticQuery, Link, graphql } from "gatsby";
 import { rhythm } from "../utils/typography";
 import { FaHome, FaUserSecret, FaLinkedin, FaGithub, FaTwitter, FaBitbucket } from "react-icons/fa";
 
-require("prismjs/plugins/line-numbers/prism-line-numbers.css");
-
 const ListLink = props => (
 	<li style={{ display: `inline-block`, marginRight: `1rem` }}>
 		<Link to={props.to}>{props.children}</Link>
