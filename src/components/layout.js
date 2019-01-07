@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { css } from "@emotion/core";
 import { StaticQuery, Link, graphql } from "gatsby";
 import { rhythm } from "../utils/typography";
-import { FaHome, FaUserSecret, FaLinkedin, FaGithub, FaTwitter, FaBitbucket } from "react-icons/fa";
+import { FaHome, FaUserSecret, FaLinkedin, FaGithub, FaGlobe, FaTwitter, FaBitbucket } from "react-icons/fa";
 
 const ListLink = props => (
 	<li style={{ display: `inline-block`, marginRight: `1rem` }}>
@@ -11,11 +11,7 @@ const ListLink = props => (
 	</li>
 );
 
-const ListLink2 = ({children}) => (
-	<li style={{ display: `inline-block`, marginRight: `1rem` }}>
-		{children}
-	</li>
-);
+const ListLink2 = ({ children }) => <li style={{ display: `inline-block`, marginRight: `1rem` }}>{children}</li>;
 
 export default ({ children }) => (
 	<StaticQuery
