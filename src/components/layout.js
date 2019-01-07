@@ -83,8 +83,13 @@ export default ({ children }) => (
 						</a>
 					</ListLink2>
 					<ListLink2>
-						<a href="https://github.com/wboka" target="_blank" rel="noopener noreferrer">
+						<a href="https://www.github.com/wboka" target="_blank" rel="noopener noreferrer">
 							<FaGithub /> <span>Github</span>
+						</a>
+					</ListLink2>
+					<ListLink2>
+						<a href="https://www.bokasolutions.com" target="_blank" rel="noopener noreferrer">
+							<FaGlobe /> <span>Boka Solutions</span>
 						</a>
 					</ListLink2>
 				</ul>
