@@ -10,10 +10,11 @@ module.exports = {
 				name: "Boka's Blog",
 				short_name: "Boka's Blog",
 				start_url: "/",
-				background_color: "#6b37bf",
-				theme_color: "#6b37bf",
+				background_color: "#ffffff",
+				theme_color: "#2b4b7c",
 				display: "standalone",
-				icon: "src/images/wb.png"
+				icon: "src/images/wb.png",
+				legacy: true
 			}
 		},
 		`gatsby-plugin-offline`,
