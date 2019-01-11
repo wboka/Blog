@@ -9,6 +9,7 @@ export default ({ data }) => {
 		<Layout>
 			<div>
 				<h1
+					className={`animated bounceInRight`}
 					css={css`
 						display: inline-block;
 						border-bottom: 1px solid;
@@ -16,9 +17,9 @@ export default ({ data }) => {
 				>
 					Blog
 				</h1>
-				<h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+				<h4 className={`animated jello`}>{data.allMarkdownRemark.totalCount} Posts</h4>
 				{data.allMarkdownRemark.edges.map(({ node }) => (
-					<div key={node.id}>
+					<div key={node.id} className={`animated jello`}>
 						<Link
 							to={node.fields.slug}
 							css={css`

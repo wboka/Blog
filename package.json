@@ -16,6 +16,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.5",
     "@weknow/gatsby-remark-codepen": "^0.1.0",
+    "animate.css": "^3.7.0",
     "gatsby": "^2.0.82",
     "gatsby-plugin-emotion": "^4.0.1",
     "gatsby-plugin-manifest": "^2.0.13",

@@ -1,4 +1,5 @@
 import React from "react";
+import animate from "animate.css";
 import { Helmet } from "react-helmet";
 import { css } from "@emotion/core";
 import { StaticQuery, Link, graphql } from "gatsby";
@@ -6,12 +7,12 @@ import { rhythm } from "../utils/typography";
 import { FaHome, FaUserSecret, FaLinkedin, FaGithub, FaGlobe, FaTwitter, FaBitbucket } from "react-icons/fa";
 
 const ListLink = props => (
-	<li style={{ display: `inline-block`, marginRight: `1rem` }}>
+	<li className={`animated flipInX`} style={{ display: `inline-block`, marginRight: `1rem` }}>
 		<Link to={props.to}>{props.children}</Link>
 	</li>
 );
 
-const ListLink2 = ({ children }) => <li style={{ display: `inline-block`, marginRight: `1rem` }}>{children}</li>;
+const ListLink2 = ({ children }) => <li className={`animated flipInX`} style={{ display: `inline-block`, marginRight: `1rem` }}>{children}</li>;
 
 export default ({ children }) => (
 	<StaticQuery
@@ -44,6 +45,7 @@ export default ({ children }) => (
 				<header style={{ marginBottom: `1.5rem` }}>
 					<Link to={`/`} style={{ textShadow: `none`, backgroundImage: `none` }}>
 						<h1
+							className={`animated rollIn`}
 							css={css`
 								margin-bottom: ${rhythm(2)};
 								text-align: center;
