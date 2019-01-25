@@ -42,5 +42,8 @@
   },
   "bugs": {
     "url": "https://github.com/wboka/blog/issues"
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.12.4"
   }
 }

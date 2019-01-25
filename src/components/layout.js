@@ -1,5 +1,6 @@
 import React from "react";
-import animate from "animate.css";
+import Container from "./container";
+import "animate.css";
 import { Helmet } from "react-helmet";
 import { css } from "@emotion/core";
 import { StaticQuery, Link, graphql } from "gatsby";
@@ -12,7 +13,11 @@ const ListLink = props => (
 	</li>
 );
 
-const ListLink2 = ({ children }) => <li className={`animated flipInX`} style={{ display: `inline-block`, marginRight: `1rem` }}>{children}</li>;
+const ListLink2 = ({ children }) => (
+	<li className={`animated flipInX`} style={{ display: `inline-block`, marginRight: `1rem` }}>
+		{children}
+	</li>
+);
 
 export default ({ children }) => (
 	<StaticQuery
@@ -26,14 +31,7 @@ export default ({ children }) => (
 			}
 		`}
 		render={data => (
-			<div
-				css={css`
-					margin: 0 auto;
-					max-width: 700px;
-					padding: ${rhythm(2)};
-					padding-top: ${rhythm(1.5)};
-				`}
-			>
+			<Container>
 				<Helmet>
 					<html lang="en" />
 					<meta charSet="utf-8" />
@@ -91,7 +89,7 @@ export default ({ children }) => (
 						</a>
 					</ListLink2>
 				</ul>
-			</div>
+			</Container>
 		)}
 	/>
 );
