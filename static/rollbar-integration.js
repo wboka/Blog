@@ -1,5 +1,3 @@
-alert();
-
 var _rollbarConfig = {
 	accessToken: "ef217de6edd94fd09064bf94b1574ab5",
 	captureUncaught: true,
