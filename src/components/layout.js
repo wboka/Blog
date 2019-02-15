@@ -3,7 +3,7 @@ import Container from "./container";
 import "animate.css";
 import { Helmet } from "react-helmet";
 import { css } from "@emotion/core";
-import { StaticQuery, Link, graphql } from "gatsby";
+import { StaticQuery, Link, graphql, withPrefix } from "gatsby";
 import { rhythm } from "../utils/typography";
 import { FaHome, FaUserSecret, FaLinkedin, FaGithub, FaGlobe, FaTwitter, FaBitbucket } from "react-icons/fa";
 
@@ -39,6 +39,8 @@ export default ({ children }) => (
 					<meta name="description" content="Web Development Blog by Wayne Boka" />
 					<title>{data.site.siteMetadata.title}</title>
 					<link rel="canonical" href="https://blog.bokasolutions.com" />
+
+					<script src={withPrefix('rollbar-integration.js')} />
 				</Helmet>
 				<header style={{ marginBottom: `1.5rem` }}>
 					<Link to={`/`} style={{ textShadow: `none`, backgroundImage: `none` }}>
