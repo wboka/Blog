@@ -7,11 +7,11 @@ public_folder: assets
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: "src/blog-posts"
     create: true
-    slug: blog-posts/{{slug}}
+    slug: "blog-posts/{{slug}}"
     fields:
-      - { name: layout, label: Layout, widget: hidden, default: post }
+      - { name: layout, label: Layout, widget: "hidden", default: post }
       - { name: categories, label: Categories, widget: list }
       - { name: tags, label: Tags, widget: list }
       - { name: layout, label: Layout }
