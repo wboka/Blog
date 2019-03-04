@@ -18,4 +18,4 @@ collections:
       - { name: layout, label: Layout }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: body, label: "Blog Post", widget: markdown }
