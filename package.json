@@ -6,10 +6,10 @@
 	"license": "MIT",
 	"scripts": {
 		"develop": "gatsby develop",
-		"deploy": "gatsby build && gh-pages -d public -b master",
-		"format": "prettier --write \"src/**/*.{js,css}\"",
+		"format": "prettier --write \"{gatsby*,src/**/*}.{js,css}\"",
 		"start": "npm run develop",
 		"build": "gatsby build",
+		"bs": "gatsby build && gatsby serve",
 		"serve": "gatsby serve",
 		"test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
 		"now-build": "npm run build"
@@ -20,6 +20,7 @@
 		"animate.css": "^3.7.0",
 		"gatsby": "^2.0.82",
 		"gatsby-plugin-emotion": "^4.0.1",
+		"gatsby-plugin-feed": "^2.0.14",
 		"gatsby-plugin-manifest": "^2.0.13",
 		"gatsby-plugin-netlify-cms": "^3.0.12",
 		"gatsby-plugin-offline": "^2.0.20",

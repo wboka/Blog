@@ -12,7 +12,8 @@ import {
   FaGithub,
   FaGlobe,
   FaTwitter,
-  FaBitbucket
+  FaBitbucket,
+  FaRss
 } from "react-icons/fa";
 
 const ListLink = props => (
@@ -121,6 +122,9 @@ export default ({ children }) => (
               <FaGithub /> <span>Github</span>
             </a>
           </ListLink2>
+          <ListLink to={`/rss.xml`}>
+            <FaRss /> RSS
+          </ListLink>
           <ListLink2>
             <a
               href="https://www.bokasolutions.com"
