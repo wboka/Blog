@@ -5,10 +5,8 @@ categories:
 tags:
   - testing web-development widgets
 date: 2019-07-23T17:00:52.704Z
-title: Manually Testing New Features
+title: Manually Testing New Widgets
 ---
-# Manually Testing New Widgets
-
 A brief primer in user testing. In this article, a _Widget_ refers to anything you want it to. A _Widget_ could be a product, feature, service, or whatever else needs testing.
 
 ## Questions to ask
