@@ -5,27 +5,24 @@ import containerStyles from "./blog-post.module.css";
 import "../../static/layout.css";
 
 export default ({ data }) => {
-  const post = data.markdownRemark;
-  return (
-    <Layout>
-      <div className={containerStyles.container}>
-        <h1 className={`animated tada`}>{post.frontmatter.title}</h1>
-        <div
-          className={`animated jello`}
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
-      </div>
-    </Layout>
-  );
+	const post = data.markdownRemark;
+	return (
+		<Layout>
+			<div className={containerStyles.container}>
+				<h1>{post.frontmatter.title}</h1>
+				<div dangerouslySetInnerHTML={{ __html: post.html }} />
+			</div>
+		</Layout>
+	);
 };
 
 export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        title
-      }
-    }
-  }
+	query($slug: String!) {
+		markdownRemark(fields: { slug: { eq: $slug } }) {
+			html
+			frontmatter {
+				title
+			}
+		}
+	}
 `;
