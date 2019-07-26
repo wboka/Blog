@@ -6,8 +6,8 @@ module.exports = {
     author: `Wayne Boka`
   },
   plugins: [
-		`gatsby-plugin-react-helmet`,
-		`gatsby-plugin-postcss`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
