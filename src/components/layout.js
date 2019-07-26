@@ -16,13 +16,13 @@ import "../../static/layout.css";
 import Bio from "../components/bio";
 
 const ListLink = props => (
-  <li className="mr-4 p-2 text-lg uppercase block sm:inline-block">
-    <Link to={props.to}>{props.children}</Link>
+  <li className="mr-4 p-2 text-lg uppercase block sm:inline-block hover:bg-teal-900 rounded">
+    <Link to={props.to} className="no-hover">{props.children}</Link>
   </li>
 );
 
 const ListLink2 = ({ children }) => (
-  <li className="mr-4 p-2 text-lg uppercase block sm:inline-block">
+  <li className="mr-4 p-2 text-lg uppercase block sm:inline-block no-hover hover:bg-teal-900 rounded">
     {children}
   </li>
 );
@@ -72,7 +72,7 @@ export default ({ children }) => (
           </header>
 
           <div className="container mx-auto p-4 w-full xl:w-3/4">
-            {children}
+						{children}
           </div>
         </div>
 
@@ -80,7 +80,8 @@ export default ({ children }) => (
           <ul className="list-none">
             <ListLink2>
               <a
-                href="https://www.twitter.com/wtboka/"
+								href="https://www.twitter.com/wtboka/"
+								className="hover:bg-teal-900 rounded no-hover"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -89,7 +90,8 @@ export default ({ children }) => (
             </ListLink2>
             <ListLink2>
               <a
-                href="https://www.bitbucket.org/wboka/"
+								href="https://www.bitbucket.org/wboka/"
+								className="hover:bg-teal-900 rounded no-hover"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -98,7 +100,8 @@ export default ({ children }) => (
             </ListLink2>
             <ListLink2>
               <a
-                href="https://www.linkedin.com/in/wayneboka/"
+								href="https://www.linkedin.com/in/wayneboka/"
+								className="hover:bg-teal-900 rounded no-hover"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -107,19 +110,21 @@ export default ({ children }) => (
             </ListLink2>
             <ListLink2>
               <a
-                href="https://www.github.com/wboka"
+								href="https://www.github.com/wboka"
+								className="hover:bg-teal-900 rounded no-hover"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaGithub className="inline-block mr-1" /> Github
               </a>
             </ListLink2>
-            <ListLink to={`/rss.xml`}>
+            <a href="/rss.xml" className="mr-4 p-2 text-lg uppercase block sm:inline-block hover:bg-teal-900 rounded no-hover">
               <FaRss className="inline-block mr-1" /> RSS
-            </ListLink>
+            </a>
             <ListLink2>
               <a
-                href="https://www.bokasolutions.com"
+								href="https://www.bokasolutions.com"
+								className="hover:bg-teal-900 rounded no-hover"
                 target="_blank"
                 rel="noopener noreferrer"
               >
