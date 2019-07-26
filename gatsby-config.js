@@ -6,7 +6,8 @@ module.exports = {
     author: `Wayne Boka`
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+		`gatsby-plugin-react-helmet`,
+		`gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -49,12 +50,6 @@ module.exports = {
       }
     },
     `gatsby-plugin-emotion`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography.js`
-      }
-    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {

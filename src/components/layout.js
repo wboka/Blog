@@ -1,19 +1,19 @@
 import React from "react";
 import Container from "./container";
 import { Helmet } from "react-helmet";
-import { css } from "@emotion/core";
 import { StaticQuery, Link, graphql, withPrefix } from "gatsby";
-import { rhythm } from "../utils/typography";
 import { FaHome, FaUserSecret, FaLinkedin, FaGithub, FaGlobe, FaTwitter, FaBitbucket, FaRss } from "react-icons/fa";
+import "../../static/layout.css";
+import Bio from "../components/bio";
 
 const ListLink = props => (
-	<li style={{ display: `inline-block`, marginRight: `1rem` }}>
+	<li className="mr-4 p-2 text-lg uppercase block sm:inline-block">
 		<Link to={props.to}>{props.children}</Link>
 	</li>
 );
 
 const ListLink2 = ({ children }) => (
-	<li style={{ display: `inline-block`, marginRight: `1rem` }}>
+	<li className="mr-4 p-2 text-lg uppercase block sm:inline-block">
 		{children}
 	</li>
 );
@@ -42,57 +42,62 @@ export default ({ children }) => (
 					<script src="https://unpkg.com/core-js-bundle@3.1.4/minified.js" />
 					<script src={withPrefix("rollbar-integration.js")} />
 				</Helmet>
-				<header style={{ marginBottom: `1.5rem` }}>
-					<Link to={`/`} style={{ textShadow: `none`, backgroundImage: `none` }}>
-						<h1
-							css={css`
-								margin-bottom: ${rhythm(2)};
-								text-align: center;
-							`}
-						>
-							{data.site.siteMetadata.title}
-						</h1>
-					</Link>
-					<ul style={{ listStyle: `none`, textAlign: `center` }}>
-						<ListLink to={`/`}>
-							<FaHome /> Home
+				<div className="flex flex-wrap">
+					<header className="bg-teal-700 text-white py-4 w-full xl:w-1/4 p-4">
+						<Link to={`/`} className="no-hover">
+							<h1 className="text-center">
+								{data.site.siteMetadata.title}
+							</h1>
+						</Link>
+						<ul className="list-none text-center">
+							<ListLink to={`/`}>
+								<FaHome className="inline-block mr-1" /> Home
+							</ListLink>
+							<ListLink to={`/about/`}>
+								<FaUserSecret className="inline-block mr-1" /> About
+							</ListLink>
+						</ul>
+
+						<Bio className="hidden xl:block" />
+					</header>
+
+					<div className="container mx-auto p-4 w-full xl:w-3/4">
+						{children}
+					</div>
+				</div>
+
+				<div className="text-center mt-4 sm:mt-0 p-2 bg-teal-700 text-white">
+					<ul className="list-none">
+						<ListLink2>
+							<a href="https://www.twitter.com/wtboka/" rel="noopener noreferrer" target="_blank">
+								<FaTwitter className="inline-block mr-1" /> Twitter
+							</a>
+						</ListLink2>
+						<ListLink2>
+							<a href="https://www.bitbucket.org/wboka/" rel="noopener noreferrer" target="_blank">
+								<FaBitbucket className="inline-block mr-1" /> BitBucket
+							</a>
+						</ListLink2>
+						<ListLink2>
+							<a href="https://www.linkedin.com/in/wayneboka/" rel="noopener noreferrer" target="_blank">
+								<FaLinkedin className="inline-block mr-1" /> Linkedin
+							</a>
+						</ListLink2>
+						<ListLink2>
+							<a href="https://www.github.com/wboka" target="_blank" rel="noopener noreferrer">
+								<FaGithub className="inline-block mr-1" /> Github
+							</a>
+						</ListLink2>
+						<ListLink to={`/rss.xml`}>
+							<FaRss className="inline-block mr-1" /> RSS
 						</ListLink>
-						<ListLink to={`/about/`}>
-							<FaUserSecret /> About
-						</ListLink>
+						<ListLink2>
+							<a href="https://www.bokasolutions.com" target="_blank" rel="noopener noreferrer">
+								<FaGlobe className="inline-block mr-1" /> Boka Solutions
+							</a>
+						</ListLink2>
 					</ul>
-				</header>
-				{children}
-				<ul style={{ listStyle: `none`, textAlign: `center` }}>
-					<ListLink2>
-						<a href="https://www.twitter.com/wtboka/" rel="noopener noreferrer" target="_blank">
-							<FaTwitter /> <span>Twitter</span>
-						</a>
-					</ListLink2>
-					<ListLink2>
-						<a href="https://www.bitbucket.org/wboka/" rel="noopener noreferrer" target="_blank">
-							<FaBitbucket /> <span>BitBucket</span>
-						</a>
-					</ListLink2>
-					<ListLink2>
-						<a href="https://www.linkedin.com/in/wayneboka/" rel="noopener noreferrer" target="_blank">
-							<FaLinkedin /> <span>Linkedin</span>
-						</a>
-					</ListLink2>
-					<ListLink2>
-						<a href="https://www.github.com/wboka" target="_blank" rel="noopener noreferrer">
-							<FaGithub /> <span>Github</span>
-						</a>
-					</ListLink2>
-					<ListLink to={`/rss.xml`}>
-						<FaRss /> RSS
-					</ListLink>
-					<ListLink2>
-						<a href="https://www.bokasolutions.com" target="_blank" rel="noopener noreferrer">
-							<FaGlobe /> <span>Boka Solutions</span>
-						</a>
-					</ListLink2>
-				</ul>
+				</div>
 			</Container>
 		)}
 	/>

@@ -1,27 +1,77 @@
-/* .gatsby-highlight {
-	background-color: #fdf6e3;
-	border-radius: 0.3em;
-	margin: 0.5em 0;
-	padding: 0 !important;
-	overflow: auto;
+@tailwind base;
+
+@tailwind components;
+
+p, ul, ol {
+	@apply py-2;
 }
 
-.gatsby-highlight pre[class*="language-"].line-numbers {
-	padding: 0;
-	padding-left: 1.8em !important;
-	overflow: initial;
-} */
+h1, h2, h3 {
+	@apply font-bold;
+}
+
+h1 {
+	@apply text-2xl;
+}
+
+h2 {
+	@apply text-xl;
+}
+
+h3 {
+	@apply text-lg;
+}
+
+ul {
+	@apply list-disc ml-5;
+}
+
+ol {
+	@apply list-decimal ml-5;
+}
+
+a:not(.no-hover):hover {
+	@apply underline;
+}
+
+.blog-post a {
+	@apply border-b-4 border-blue-600 m-1 inline-block;
+}
+
+.blog-post a[target="_blank"]:after {
+	content: " (Opens in a new window)"
+}
+
+.blog-post a:hover {
+	@apply border-b-4 border-blue-600 bg-blue-600 text-white no-underline;
+}
+
+@screen md {
+	h1 {
+		@apply text-4xl;
+	}
+
+	h2 {
+		@apply text-3xl;
+	}
+
+	h3 {
+		@apply text-2xl;
+	}
+}
+
+@tailwind utilities;
 
 /**
  * Add back the container background-color, border-radius, padding, margin
  * and overflow that we removed from <pre>.
  */
- .gatsby-highlight {
-  background-color: #fdf6e3;
-  border-radius: 0.3em;
-  margin: 0.5em 0;
-  padding: 1em;
-  overflow: auto;
+.gatsby-highlight {
+	background-color: #fdf6e3;
+	border-radius: 0.3em;
+	margin: 0.5em 0;
+	padding: 1em;
+	overflow: auto;
 }
 
 /**
@@ -31,15 +81,15 @@
  * 2. Always fill the visible space in .gatsby-highlight.
  * 3. Adjust the position of the line numbers
  */
-.gatsby-highlight pre[class*="language-"] {
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-  overflow: initial;
-  float: left; /* 1 */
-  min-width: 100%; /* 2 */
+.gatsby-highlight pre[class*='language-'] {
+	background-color: transparent;
+	margin: 0;
+	padding: 0;
+	overflow: initial;
+	float: left; /* 1 */
+	min-width: 100%; /* 2 */
 }
 
-.gatsby-highlight pre[class*="language-"].line-numbers {
-  padding-left: 2.8em; /* 3 */
+.gatsby-highlight pre[class*='language-'].line-numbers {
+	padding-left: 2.8em; /* 3 */
 }
