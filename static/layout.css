@@ -61,7 +61,7 @@ a:not(.no-hover):hover {
 }
 
 .blog-post a {
-	@apply border-b-4 border-blue-600 m-1 inline-block;
+	@apply border-b-4 border-blue-600 m-1 inline-block rounded px-2 pt-2;
 }
 
 .blog-post a[target='_blank']:after {

@@ -12,8 +12,8 @@ export default props => (
     <p>
       Hello! My name is Wayne and I am a website developer based out of
       Westfield, PA. I have been building websites and web applications since
-      2011. <a href="https://m.me/bokasolutions">Send me a Facebook message</a>{" "}
-      or <a href="mailto:wayne@bokasolutions.com">email me</a> to discuss how I
+      2011. <a href="https://m.me/bokasolutions" className="border-b-4 border-blue-500 hover:bg-blue-500 px-4 pt-2 no-hover rounded inline-block">Send me a Facebook message</a>{" "}
+      or <a href="mailto:wayne@bokasolutions.com" className="border-b-4 border-blue-500 hover:bg-blue-500 px-4 pt-2 no-hover rounded inline-block">email me</a> to discuss how I
       can help build your online presence.
     </p>
   </div>
