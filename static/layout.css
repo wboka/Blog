@@ -86,6 +86,11 @@ a:not(.no-hover):hover {
 	}
 }
 
+:focus {
+	outline: 0.25em solid #FF0000;
+	@apply block;
+}
+
 @tailwind utilities;
 
 /**

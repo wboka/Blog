@@ -120,12 +120,11 @@ export default ({ children }) => (
                 <FaGithub className="inline-block mr-1" /> Github
               </a>
             </ListLink2>
-            <a
-              href="/rss.xml"
-              className="mr-4 p-2 text-lg uppercase block sm:inline-block hover:bg-teal-900 rounded no-hover"
-            >
-              <FaRss className="inline-block mr-1" /> RSS
-            </a>
+            <li className="mr-4 p-2 text-lg uppercase block sm:inline-block no-hover hover:bg-teal-900 rounded">
+              <a href="/rss.xml">
+                <FaRss className="inline-block mr-1" /> RSS
+              </a>
+            </li>
             <ListLink2>
               <a
                 href="https://www.bokasolutions.com"
