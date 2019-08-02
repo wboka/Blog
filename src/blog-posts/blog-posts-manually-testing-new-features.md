@@ -3,7 +3,8 @@ layout: post
 categories:
   - web-development
 tags:
-  - testing web-development widgets
+  - testing
+  - widgets
 date: 2019-07-23T17:00:52.704Z
 title: Manually Testing New Widgets
 ---

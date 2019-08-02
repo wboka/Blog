@@ -17,14 +17,35 @@ export default ({ data }) => {
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
             <p className="italic p-2">{node.frontmatter.date}</p>
+
+						<div className="flex flex-wrap p-2">
+							{
+								node.frontmatter.categories ? node.frontmatter.categories.map(category => {
+									return <span className="mr-2 mb-2 bg-teal-600 text-white p-2 rounded leading-none flex items-center">{category}</span>
+								}) : null
+							}
+						</div>
+
             <div className="border border-teal-600 hover:bg-teal-600 m-2 text-white rounded shadow-lg">
               <Link to={node.fields.slug} className="no-hover">
                 <h3 className="bg-teal-800 hover:bg-transparent rounded-t p-2">
                   {node.frontmatter.title}
                 </h3>
-                <p className="bg-teal-200 hover:bg-transparent text-black p-2">
-                  {node.excerpt}
-                </p>
+
+								<div className="bg-teal-200 hover:bg-transparent text-black p-2">
+
+	                <p>
+	                  {node.excerpt}
+	                </p>
+
+									<div className="flex flex-wrap">
+										{
+											node.frontmatter.tags ? node.frontmatter.tags.map(tag => {
+												return <span className="mr-2 mb-2 bg-teal-600 text-white p-2 rounded leading-none flex items-center">{tag}</span>
+											}) : null
+										}
+									</div>
+								</div>
               </Link>
             </div>
           </div>
@@ -43,7 +64,9 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
+						date(formatString: "MMMM DD, YYYY"),
+						categories
+						tags
           }
           fields {
             slug

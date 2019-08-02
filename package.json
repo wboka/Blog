@@ -7,7 +7,7 @@
 	"scripts": {
 		"develop": "gatsby develop",
 		"format": "prettier --write \"{gatsby*,src/**/*}.{js,css}\"",
-		"start": "yarn develop",
+		"start": "gatsby develop",
 		"build": "gatsby build",
 		"bs": "gatsby build && gatsby serve",
 		"serve": "gatsby serve",
