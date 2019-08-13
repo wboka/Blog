@@ -2,7 +2,6 @@
 layout: post
 categories:
   - web-development
-  - feeds
 tags:
   - rss
   - atom

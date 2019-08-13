@@ -10,7 +10,9 @@ import {
   FaGlobe,
   FaTwitter,
   FaBitbucket,
-  FaRss
+  FaRss,
+  FaTags,
+  FaLayerGroup
 } from "react-icons/fa";
 import "../../static/layout.css";
 import Bio from "../components/bio";
@@ -71,6 +73,15 @@ export default ({ children }) => (
             </ul>
 
             <Bio className="hidden xl:block" />
+
+            <ul className="list-none text-center">
+              <ListLink to={`/categories/`}>
+                <FaLayerGroup className="inline-block mr-1" /> Categories
+              </ListLink>
+              <ListLink to={`/tags/`}>
+                <FaTags className="inline-block mr-1" /> Tags
+              </ListLink>
+            </ul>
           </header>
 
           <div className="container mx-auto p-4 w-full xl:w-3/4">
