@@ -15,7 +15,7 @@ module.exports = {
         short_name: "Boka's Blog",
         start_url: "/",
         background_color: "#ffffff",
-        theme_color: "#2b4b7c",
+        theme_color: "#2c7a7b",
         display: "standalone",
         icon: "src/images/wb.png",
         legacy: true
