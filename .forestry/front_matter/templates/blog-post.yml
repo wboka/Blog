@@ -30,5 +30,6 @@ fields:
   default: post
   hidden: true
 pages:
+- src/blog-posts/js-date-validation.md
 - src/blog-posts/coldfusion-isdate-quirks.md
 - src/blog-posts/hello-from-forestry.md
