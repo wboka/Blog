@@ -7,7 +7,6 @@ sections:
 - type: document
   path: static/robots.txt
   label: robots.txt
-  match: "**/*"
 - type: directory
   path: src/blog-posts
   label: Posts
