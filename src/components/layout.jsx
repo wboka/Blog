@@ -15,7 +15,7 @@ import {
   FaLayerGroup
 } from "react-icons/fa";
 import "../../static/layout.css";
-import Bio from "../components/bio";
+import Bio from "./bio";
 
 const ListLink = props => (
   <li className="mr-4 p-2 text-lg uppercase block sm:inline-block hover:bg-teal-900 rounded">
@@ -131,8 +131,8 @@ export default ({ children }) => (
                 <FaGithub className="inline-block mr-1" /> Github
               </a>
             </ListLink2>
-            <li className="mr-4 p-2 text-lg uppercase block sm:inline-block no-hover hover:bg-teal-900 rounded">
-              <a href="/rss.xml">
+            <li className="mr-4 p-2 text-lg uppercase block sm:inline-block hover:bg-teal-900 rounded">
+              <a href="/rss.xml" className="no-hover">
                 <FaRss className="inline-block mr-1" /> RSS
               </a>
             </li>

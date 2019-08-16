@@ -7,6 +7,9 @@ export default props => (
       src={headshot}
       className="rounded-full w-1/2 sm:w-1/4 my-2 mx-auto shadow-lg"
       alt="Headshot of Wayne Boka, Web Developer"
+      onClick={e =>
+        console.log(e.detail === 3 ? (window.location.href = `/admin`) : null)
+      }
     />
 
     <p>
