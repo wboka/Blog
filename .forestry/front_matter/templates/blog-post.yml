@@ -29,3 +29,5 @@ fields:
   label: layout
   default: post
   hidden: true
+pages:
+- src/blog-posts/hello-from-forestry.md
