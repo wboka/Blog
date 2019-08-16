@@ -1,11 +1,17 @@
 ---
 layout: post
-title: "Small Table, Big Information"
-date: '2018-12-11'
-categories: [web-development]
-tags: [javascript, table, VueJS, SweetAlert, data]
----
+title: Small Table, Big Information
+date: 2018-12-11
+categories:
+- Web Development
+tags:
+- javascript
+- table
+- VueJS
+- SweetAlert
+- data
 
+---
 Hello all!
 
 In a tale as old as time itself, my customer wanted a lot of information available in a table format while being narrow enough to fit on a mobile device.
