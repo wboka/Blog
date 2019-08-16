@@ -4,6 +4,10 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: document
+  path: static/robots.txt
+  label: robots.txt
+  match: "**/*"
 - type: directory
   path: src/blog-posts
   label: Posts
