@@ -3,17 +3,29 @@ label: Blog Post
 hide_body: false
 fields:
 - type: text
-  name: layout
-  label: layout
-- type: list
-  name: categories
-  label: categories
-- type: list
-  name: tags
-  label: tags
+  name: title
+  label: title
+  config:
+    required: true
 - type: datetime
   name: date
   label: date
+  default: now
+  config:
+    required: true
+- type: list
+  name: categories
+  label: categories
+  config:
+    use_select: false
+    min: '1'
+- type: list
+  name: tags
+  label: tags
+  config:
+    min: '1'
 - type: text
-  name: title
-  label: title
+  name: layout
+  label: layout
+  default: post
+  hidden: true
