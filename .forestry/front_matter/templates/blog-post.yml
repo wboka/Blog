@@ -30,4 +30,5 @@ fields:
   default: post
   hidden: true
 pages:
+- src/blog-posts/coldfusion-isdate-quirks.md
 - src/blog-posts/hello-from-forestry.md
