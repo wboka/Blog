@@ -20,11 +20,13 @@ const TagsPage = ({
     <Helmet title={title} />
     <div>
       <h1>Tags</h1>
-      <ul>
+      <ul className="list-none">
         {group.map(tag => (
-          <li key={tag.fieldValue}>
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})
+          <li key={tag.fieldValue} className="block">
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`} className="block border border-teal-500 bg-teal-400 text-white mr-2 mb-2 p-4 no-hover rounded-lg hover:shadow-lg focus:shadow-lg">
+              <h2>
+								{tag.fieldValue} <span className="bg-teal-600 text-white px-2 py-1 rounded">{tag.totalCount}</span>
+							</h2>
             </Link>
           </li>
         ))}

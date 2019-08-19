@@ -18,7 +18,7 @@ import "../../static/layout.css";
 import Bio from "./bio";
 
 const ListLink = props => (
-  <li className="mr-4 p-2 text-lg uppercase block sm:inline-block hover:bg-teal-900 rounded">
+  <li className="mr-4 p-2 text-lg uppercase block sm:inline-block hover:bg-teal-900 rounded lift">
     <Link to={props.to} className="no-hover">
       {props.children}
     </Link>
@@ -26,7 +26,7 @@ const ListLink = props => (
 );
 
 const ListLink2 = ({ children }) => (
-  <li className="mr-4 p-2 text-lg uppercase block sm:inline-block no-hover hover:bg-teal-900 rounded">
+  <li className="mr-4 p-2 text-lg uppercase block sm:inline-block no-hover hover:bg-teal-900 rounded lift">
     {children}
   </li>
 );
@@ -131,7 +131,7 @@ export default ({ children }) => (
                 <FaGithub className="inline-block mr-1" /> Github
               </a>
             </ListLink2>
-            <li className="mr-4 p-2 text-lg uppercase block sm:inline-block hover:bg-teal-900 rounded">
+            <li className="mr-4 p-2 text-lg uppercase block sm:inline-block hover:bg-teal-900 rounded lift">
               <a href="/rss.xml" className="no-hover">
                 <FaRss className="inline-block mr-1" /> RSS
               </a>

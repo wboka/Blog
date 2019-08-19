@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "./layout";
+import { FaLayerGroup, FaTag } from "react-icons/fa";
 
 const _ = require("lodash");
 
@@ -8,7 +9,10 @@ export default ({ data }) => {
   const post = data.markdownRemark;
   return (
     <Layout>
-      <h2>{post.frontmatter.title}</h2>
+			<h2>{post.frontmatter.title}</h2>
+
+			<h3>{post.frontmatter.date}</h3>
+
       <div className="flex flex-wrap my-2">
         {post.frontmatter.categories ? (
           <span className="mr-2 mb-2 py-2">Filed under:</span>
@@ -22,19 +26,23 @@ export default ({ data }) => {
                   className="no-hover"
                 >
                   <span className="mr-2 mb-2 bg-teal-600 text-white p-2 rounded leading-none flex items-center">
-                    {category}
+                    <FaLayerGroup />&nbsp;{category}
                   </span>
                 </Link>
               );
             })
           : null}
       </div>
+
+
       <div
         className="blog-post"
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
 
       {post.frontmatter.tags ? <h3>Tags</h3> : null}
+
+			<hr className="bg-teal-700 h-1 rounded-full" />
 
       <div className="flex flex-wrap my-2">
         {post.frontmatter.tags
@@ -46,7 +54,7 @@ export default ({ data }) => {
                   className="no-hover"
                 >
                   <span className="mr-2 mb-2 bg-blue-600 text-white p-2 rounded leading-none flex items-center">
-                    {tag}
+                    <FaTag />&nbsp;{tag}
                   </span>
                 </Link>
               );
@@ -62,7 +70,8 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        title
+				title
+				date(formatString: "MMMM DD, YYYY @ HH:mm:ss")
         categories
         tags
       }

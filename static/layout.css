@@ -60,6 +60,11 @@ a:not(.no-hover):hover {
 	@apply underline;
 }
 
+a:hover, a:focus, .lift:hover, .lift:focus {
+	transform: translateY(-0.25em);
+	transition: 0.25s;
+}
+
 .blog-post a {
 	@apply border-b-4 border-blue-600 m-1 inline-block rounded px-2 pt-2;
 }

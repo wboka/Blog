@@ -10,6 +10,9 @@ export default props => (
       onClick={e =>
         console.log(e.detail === 3 ? (window.location.href = `/admin`) : null)
       }
+			onTouch={e =>
+        console.log(e.detail === 3 ? (window.location.href = `/admin`) : null)
+      }
     />
 
     <p>
@@ -18,14 +21,14 @@ export default props => (
       2011.{" "}
       <a
         href="https://m.me/bokasolutions"
-        className="border-b-4 border-blue-500 hover:bg-blue-500 px-4 pt-2 no-hover rounded inline-block"
+        className="border-b-4 border-blue-500 hover:bg-blue-500 px-2 pt-2 no-hover rounded inline-block"
       >
         Send me a Facebook message
       </a>{" "}
       or{" "}
       <a
         href="mailto:wayne@bokasolutions.com"
-        className="border-b-4 border-blue-500 hover:bg-blue-500 px-4 pt-2 no-hover rounded inline-block"
+        className="border-b-4 border-blue-500 hover:bg-blue-500 px-2 pt-2 no-hover rounded inline-block"
       >
         email me
       </a>{" "}

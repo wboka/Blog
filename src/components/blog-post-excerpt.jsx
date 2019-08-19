@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import { FaLayerGroup, FaTag } from "react-icons/fa";
 
 const _ = require("lodash");
 
@@ -20,7 +21,7 @@ export default ({ post }) => (
                   key={category}
                   className="mr-2 mb-2 bg-teal-600 text-white p-2 rounded leading-none flex items-center"
                 >
-                  {category}
+                  <FaLayerGroup />&nbsp;{category}
                 </span>
               </Link>
             );
@@ -47,7 +48,7 @@ export default ({ post }) => (
                 className="no-hover"
               >
                 <span className="mr-2 mb-2 bg-blue-600 text-white p-2 rounded leading-none flex items-center">
-                  {tag}
+                  <FaTag />&nbsp;{tag}
                 </span>
               </Link>
             );
