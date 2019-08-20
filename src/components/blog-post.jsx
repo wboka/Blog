@@ -25,7 +25,7 @@ export default ({ data }) => {
                   to={"/categories/" + _.kebabCase(category)}
                   className="no-hover"
                 >
-                  <span className="mr-2 mb-2 bg-teal-600 text-white p-2 rounded leading-none flex items-center">
+                  <span className="mr-2 mb-2 bg-teal-600 text-white p-2 rounded leading-none flex items-center shadow-md hover:shadow-lg">
                     <FaLayerGroup />&nbsp;{category}
                   </span>
                 </Link>
@@ -53,7 +53,7 @@ export default ({ data }) => {
                   to={"/tags/" + _.kebabCase(tag)}
                   className="no-hover"
                 >
-                  <span className="mr-2 mb-2 bg-blue-600 text-white p-2 rounded leading-none flex items-center">
+                  <span className="mr-2 mb-2 bg-blue-600 text-white p-2 rounded leading-none flex items-center shadow-md hover:shadow-lg">
                     <FaTag />&nbsp;{tag}
                   </span>
                 </Link>

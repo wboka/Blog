@@ -74,7 +74,7 @@ a:hover, a:focus, .lift:hover, .lift:focus {
 }
 
 .blog-post a:hover {
-	@apply border-b-4 border-blue-600 bg-blue-600 text-white no-underline;
+	@apply border-b-4 border-blue-600 bg-blue-600 text-white no-underline shadow-md;
 }
 
 @screen md {

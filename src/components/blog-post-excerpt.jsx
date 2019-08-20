@@ -19,7 +19,7 @@ export default ({ post }) => (
               >
                 <span
                   key={category}
-                  className="mr-2 mb-2 bg-teal-600 text-white p-2 rounded leading-none flex items-center"
+                  className="mr-2 mb-2 bg-teal-600 text-white p-2 rounded leading-none flex items-center shadow-md hover:shadow-lg"
                 >
                   <FaLayerGroup />&nbsp;{category}
                 </span>
@@ -30,7 +30,7 @@ export default ({ post }) => (
     </div>
 
     <Link to={post.fields.slug} className="no-hover">
-      <div className="border border-teal-600 bg-teal-400 hover:bg-yellow-500 hover:border-yellow-500 m-2 text-white rounded shadow-lg">
+      <div className="border border-teal-600 bg-teal-400 hover:bg-yellow-500 hover:border-yellow-500 m-2 text-white rounded shadow-md hover:shadow-lg lift">
         <h3 className="text-black rounded-t p-2">{post.frontmatter.title}</h3>
 
         <div className="text-black p-2">
@@ -47,7 +47,7 @@ export default ({ post }) => (
                 to={"/tags/" + _.kebabCase(tag)}
                 className="no-hover"
               >
-                <span className="mr-2 mb-2 bg-blue-600 text-white p-2 rounded leading-none flex items-center">
+                <span className="mr-2 mb-2 bg-blue-600 text-white p-2 rounded leading-none flex items-center shadow-md hover:shadow-lg">
                   <FaTag />&nbsp;{tag}
                 </span>
               </Link>
