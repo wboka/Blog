@@ -1,5 +1,5 @@
 ---
-date: 2019-08-16T10:07:00-04:00
+date: 2019-08-16T14:07:00.000+00:00
 layout: post
 title: Hello From Forestry
 categories:
@@ -8,6 +8,7 @@ tags:
 - Netlify CMS
 - Forestry.io
 - CMS
+hero_image: "/assets/JAMStackForestryGatsbyNetlify.png"
 
 ---
 # Hello from Forestry.io CMS
