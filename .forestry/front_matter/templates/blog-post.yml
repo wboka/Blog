@@ -2,6 +2,12 @@
 label: Blog Post
 hide_body: false
 fields:
+- name: hero_image
+  type: file
+  config:
+    maxSize: 250
+  label: Hero Image
+  description: Image for the top of the article
 - type: text
   name: title
   label: title
@@ -29,12 +35,6 @@ fields:
   label: layout
   default: post
   hidden: true
-- name: hero_image
-  type: file
-  config:
-    maxSize: 250
-  label: Hero Image
-  description: Image for the top of the article
 pages:
 - src/blog-posts/small-table-big-information.md
 - src/blog-posts/blog-posts-new-rss-atom-feed.md
