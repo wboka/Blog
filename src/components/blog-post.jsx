@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import Img from "gatsby-image";
 import Layout from "./layout";
 import { FaLayerGroup, FaTag } from "react-icons/fa";
 
@@ -11,11 +10,11 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <img
+      {post.frontmatter.hero_image ? <img
         className="rounded"
         src={post.frontmatter.hero_image}
         alt={post.frontmatter.title}
-      />
+      /> : null}
 
       <h2>{post.frontmatter.title}</h2>
 
