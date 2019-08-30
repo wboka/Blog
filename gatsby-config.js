@@ -7,28 +7,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-postcss`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: "Boka's Blog",
-        short_name: "Boka's Blog",
-        start_url: "/",
-        background_color: "#ffffff",
-        theme_color: "#2c7a7b",
-        display: "standalone",
-        icon: "src/images/wb.png",
-        legacy: true
-      }
-    },
-    `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `src`,
-        path: `${__dirname}/src/`
-      }
-    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-transformer-remark",
       options: {
@@ -47,6 +27,35 @@ module.exports = {
             }
           }
         ]
+      }
+    },
+    `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Boka's Blog",
+        short_name: "Boka's Blog",
+        start_url: "/",
+        background_color: "#ffffff",
+        theme_color: "#2c7a7b",
+        display: "standalone",
+        icon: "src/images/wb.png",
+        legacy: true
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/images`,
+        name: "images"
+      }
+    },
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`
       }
     },
     `gatsby-plugin-emotion`,

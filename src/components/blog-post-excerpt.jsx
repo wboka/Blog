@@ -21,7 +21,8 @@ export default ({ post }) => (
                   key={category}
                   className="mr-2 mb-2 bg-teal-600 text-white p-2 rounded leading-none flex items-center shadow-md hover:shadow-lg"
                 >
-                  <FaLayerGroup />&nbsp;{category}
+                  <FaLayerGroup />
+                  &nbsp;{category}
                 </span>
               </Link>
             );
@@ -48,7 +49,8 @@ export default ({ post }) => (
                 className="no-hover"
               >
                 <span className="mr-2 mb-2 bg-blue-600 text-white p-2 rounded leading-none flex items-center shadow-md hover:shadow-lg">
-                  <FaTag />&nbsp;{tag}
+                  <FaTag />
+                  &nbsp;{tag}
                 </span>
               </Link>
             );

@@ -8,10 +8,10 @@ tags:
 - Netlify CMS
 - Forestry.io
 - CMS
-hero_image: "/assets/JAMStackForestryGatsbyNetlify.png"
+hero_image: /images/JAMStackForestryGatsbyNetlify.png
 
 ---
-# Hello from Forestry.io CMS
+# Introduction
 
 This seems to be quite a nice interface.
 

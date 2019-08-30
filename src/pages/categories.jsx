@@ -23,10 +23,16 @@ const CategoriesPage = ({
       <ul className="list-none">
         {group.map(category => (
           <li key={category.fieldValue} className="block">
-            <Link to={`/categories/${kebabCase(category.fieldValue)}/`} className="block border border-teal-500 bg-teal-400 text-white mr-2 mb-2 p-4 no-hover rounded-lg hover:shadow-lg focus:shadow-lg">
-							<h2>
-								{category.fieldValue} <span className="bg-teal-600 text-white px-2 py-1 rounded">{category.totalCount}</span>
-							</h2>
+            <Link
+              to={`/categories/${kebabCase(category.fieldValue)}/`}
+              className="block border border-teal-500 bg-teal-400 text-white mr-2 mb-2 p-4 no-hover rounded-lg hover:shadow-lg focus:shadow-lg"
+            >
+              <h2>
+                {category.fieldValue}{" "}
+                <span className="bg-teal-600 text-white px-2 py-1 rounded">
+                  {category.totalCount}
+                </span>
+              </h2>
             </Link>
           </li>
         ))}
