@@ -43,6 +43,10 @@ ol {
 	@apply list-decimal ml-5;
 }
 
+blockquote {
+	@apply ml-6 border-l-4 border-teal-500 pl-4 bg-teal-200 shadow-md rounded-r-lg;
+}
+
 .gatsby-highlight {
 	@apply shadow-lg;
 }
