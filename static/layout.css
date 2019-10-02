@@ -44,7 +44,7 @@ ol {
 }
 
 blockquote {
-	@apply ml-6 my-4 border-l-4 border-teal-500 pl-4 bg-teal-200 shadow-md rounded-r-lg;
+	@apply ml-6 my-4 border-l-4 border-teal-500 p-4 bg-teal-200 shadow-md rounded-r-lg;
 }
 
 .gatsby-highlight {
