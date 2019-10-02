@@ -13,7 +13,7 @@ hero_image: ''
 ---
 I've added a feed to my blog so you can easily stay up to date in your favorite RSS or Atom feed reader.
 
-You can find it [here](https://blog.bokasolutions.com/rss.xml "Wayne Boka's Blog RSS Feed")
+You can find it [here](https://blog.bokasolutions.com/rss.xml "Wayne Boka's Blog RSS Feed").
 
 Enjoy!
 
