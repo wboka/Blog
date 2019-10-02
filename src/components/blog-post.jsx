@@ -11,7 +11,7 @@ export default ({ data }) => {
   return (
     <Layout>
       {post.frontmatter.hero_image ? <img
-        className="rounded"
+        className="rounded mx-auto"
         src={post.frontmatter.hero_image}
         alt={post.frontmatter.title}
       /> : null}
