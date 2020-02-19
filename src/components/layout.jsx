@@ -12,7 +12,8 @@ import {
   FaBitbucket,
   FaRss,
   FaTags,
-  FaLayerGroup
+	FaLayerGroup,
+	FaEnvelope
 } from "react-icons/fa";
 import "../../static/layout.css";
 import Bio from "./bio";
@@ -66,6 +67,9 @@ export default ({ children }) => (
             <ul className="list-none text-center">
               <ListLink to={`/`}>
                 <FaHome className="inline-block mr-1" /> Home
+              </ListLink>
+							<ListLink to={`/contact`}>
+                <FaEnvelope className="inline-block mr-1" /> Contact
               </ListLink>
               <ListLink to={`/about/`}>
                 <FaUserSecret className="inline-block mr-1" /> About
