@@ -37,10 +37,10 @@ fields:
   hidden: true
 pages:
 - src/blog-posts/another-successful-hacktoberfest.md
+- src/blog-posts/blog-posts-manually-testing-new-features.md
 - src/blog-posts/blog-posts-new-rss-atom-feed.md
+- src/blog-posts/coldfusion-isdate-quirks.md
 - src/blog-posts/hacktoberfest.md
 - src/blog-posts/hello-from-forestry.md
-- src/blog-posts/small-table-big-information.md
-- src/blog-posts/blog-posts-manually-testing-new-features.md
 - src/blog-posts/js-date-validation.md
-- src/blog-posts/coldfusion-isdate-quirks.md
+- src/blog-posts/small-table-big-information.md
