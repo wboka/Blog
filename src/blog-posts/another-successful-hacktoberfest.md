@@ -17,6 +17,6 @@ A BIG thank you to everyone who helped contribute to this year's Hacktoberfest p
 
 ### Contributors
 
-* \[Menelion\](https://github.com/Menelion)
-* \[corodrigues\](https://github.com/corodrigues)
-* \[Daibushi\](https://github.com/Daibushi)
+* [Menelion](https://github.com/Menelion)
+* [corodrigues](https://github.com/corodrigues)
+* [Daibushi](https://github.com/Daibushi)
