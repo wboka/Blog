@@ -99,7 +99,7 @@ export default ({ children }) => (
               <a
                 href="https://www.twitter.com/wtboka/"
                 className="hover:bg-teal-900 rounded no-hover"
-                rel="noopener noreferrer"
+                rel="noopener"
                 target="_blank"
               >
                 <FaTwitter className="inline-block mr-1" /> Twitter
@@ -109,7 +109,7 @@ export default ({ children }) => (
               <a
                 href="https://www.bitbucket.org/wboka/"
                 className="hover:bg-teal-900 rounded no-hover"
-                rel="noopener noreferrer"
+                rel="noopener"
                 target="_blank"
               >
                 <FaBitbucket className="inline-block mr-1" /> BitBucket
@@ -119,7 +119,7 @@ export default ({ children }) => (
               <a
                 href="https://www.linkedin.com/in/wayneboka/"
                 className="hover:bg-teal-900 rounded no-hover"
-                rel="noopener noreferrer"
+                rel="noopener"
                 target="_blank"
               >
                 <FaLinkedin className="inline-block mr-1" /> Linkedin
@@ -130,7 +130,7 @@ export default ({ children }) => (
                 href="https://www.github.com/wboka"
                 className="hover:bg-teal-900 rounded no-hover"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
               >
                 <FaGithub className="inline-block mr-1" /> Github
               </a>
@@ -145,7 +145,7 @@ export default ({ children }) => (
                 href="https://www.bokasolutions.com"
                 className="hover:bg-teal-900 rounded no-hover"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
               >
                 <FaGlobe className="inline-block mr-1" /> Boka Solutions
               </a>
