@@ -41,8 +41,8 @@ I'm typing up the actions in this video from [Blender Guru on YouTube](https://w
     1. _Render: 2_
     2. _Viewport_: 1
     3. _Quality_: 3
-    4. _Use Creases:_ CHECKED
-    5. **Catmull-Clark** is selected
+    4. _Use Creases_ is checked
+    5. _Catmull-Clark_ is selected
 
 ### Part 2: Making the Icing
 
@@ -57,7 +57,7 @@ I'm typing up the actions in this video from [Blender Guru on YouTube](https://w
 7. Add the **Solidify** modifier
 8. Change **Solidify** settings
    1. _Offset_: 1
-   2. Thickness: 0.0025m
+   2. **Thickness**: 0.0025m
 9. Move **Solidify** modifier up above the **Subdivision Surface** modifier
 
 ### More to come
