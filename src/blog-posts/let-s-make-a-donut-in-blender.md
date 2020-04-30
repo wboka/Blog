@@ -60,4 +60,9 @@ I'm typing up the actions in this video from [Blender Guru on YouTube](https://w
    2. **Thickness**: 0.0025m
 9. Move **Solidify** modifier up above the **Subdivision Surface** modifier
 
-### More to come
+### Part 3: Making the Icing 2
+
+1. Select icing mesh in **Edit** mode by pressing `a`
+2. `Right-click` the mesh and select **Subdivide**
+3. Change **Smoothness** to _1_
+4. More to come
