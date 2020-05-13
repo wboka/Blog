@@ -9,6 +9,7 @@ tags:
 date: 2019-03-11T13:38:07.160+00:00
 title: New RSS/Atom Feed
 hero_image: ''
+draft: false
 
 ---
 I've added a feed to my blog so you can easily stay up to date in your favorite RSS or Atom feed reader.

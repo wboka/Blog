@@ -9,6 +9,7 @@ categories:
 tags:
 - Learn X in Y Minutes (Language Edition)
 - Hacktoberfest
+draft: true
 
 ---
 It's that time of year again for Hacktoberfest, the annual event hosted from Digital Ocean!

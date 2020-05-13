@@ -9,6 +9,7 @@ tags:
 - 3d
 - donut
 - blender
+draft: false
 
 ---
 ## Let's Make a Donut in Blender

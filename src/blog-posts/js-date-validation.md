@@ -9,6 +9,7 @@ tags:
 - date
 - validation
 - post-mortem
+draft: false
 
 ---
 Hello all!

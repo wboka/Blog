@@ -12,8 +12,8 @@ import {
   FaBitbucket,
   FaRss,
   FaTags,
-	FaLayerGroup,
-	FaEnvelope
+  FaLayerGroup,
+  FaEnvelope
 } from "react-icons/fa";
 import "../../static/layout.css";
 import Bio from "./bio";
@@ -68,7 +68,7 @@ export default ({ children }) => (
               <ListLink to={`/`}>
                 <FaHome className="inline-block mr-1" /> Home
               </ListLink>
-							<ListLink to={`/contact`}>
+              <ListLink to={`/contact`}>
                 <FaEnvelope className="inline-block mr-1" /> Contact
               </ListLink>
               <ListLink to={`/about/`}>
@@ -99,7 +99,7 @@ export default ({ children }) => (
               <a
                 href="https://www.twitter.com/wtboka/"
                 className="hover:bg-teal-900 rounded no-hover"
-                rel="noopener"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 <FaTwitter className="inline-block mr-1" /> Twitter
@@ -109,7 +109,7 @@ export default ({ children }) => (
               <a
                 href="https://www.bitbucket.org/wboka/"
                 className="hover:bg-teal-900 rounded no-hover"
-                rel="noopener"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 <FaBitbucket className="inline-block mr-1" /> BitBucket
@@ -119,7 +119,7 @@ export default ({ children }) => (
               <a
                 href="https://www.linkedin.com/in/wayneboka/"
                 className="hover:bg-teal-900 rounded no-hover"
-                rel="noopener"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 <FaLinkedin className="inline-block mr-1" /> Linkedin
@@ -130,7 +130,7 @@ export default ({ children }) => (
                 href="https://www.github.com/wboka"
                 className="hover:bg-teal-900 rounded no-hover"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <FaGithub className="inline-block mr-1" /> Github
               </a>
@@ -145,7 +145,7 @@ export default ({ children }) => (
                 href="https://www.bokasolutions.com"
                 className="hover:bg-teal-900 rounded no-hover"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <FaGlobe className="inline-block mr-1" /> Boka Solutions
               </a>

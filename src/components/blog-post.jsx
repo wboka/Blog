@@ -10,11 +10,13 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      {post.frontmatter.hero_image ? <img
-        className="rounded mx-auto"
-        src={post.frontmatter.hero_image}
-        alt={post.frontmatter.title}
-      /> : null}
+      {post.frontmatter.hero_image ? (
+        <img
+          className="rounded mx-auto"
+          src={post.frontmatter.hero_image}
+          alt={post.frontmatter.title}
+        />
+      ) : null}
 
       <h2>{post.frontmatter.title}</h2>
 

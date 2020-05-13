@@ -9,6 +9,7 @@ tags:
 - validation
 - coldfusion
 - post-mortem
+draft: false
 
 ---
 Hello all!

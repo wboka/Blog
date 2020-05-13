@@ -9,6 +9,7 @@ categories:
 tags:
 - Learn X in Y Minutes (Language Edition)
 - Hacktoberfest 2019
+draft: false
 
 ---
 ## Thanks!

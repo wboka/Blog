@@ -10,6 +10,7 @@ tags:
 - VueJS
 - SweetAlert
 - data
+draft: false
 
 ---
 Hello all!
