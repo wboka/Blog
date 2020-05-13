@@ -26,17 +26,28 @@ module.exports = {
 			}
 		},
 		{
+			resolve: "gatsby-plugin-rollbar",
+			options: {
+				accessToken: "5b782dd5b6dd4516a4aa9d2c31131c43",
+				captureUncaught: true,
+				captureUnhandledRejections: true,
+				payload: {
+					environment: "production"
+				}
+			}
+		},
+		{
 			resolve: "gatsby-transformer-remark",
 			options: {
 				plugins: [
 					{
-						resolve:"@weknow/gatsby-remark-codepen",
+						resolve: "@weknow/gatsby-remark-codepen",
 						options: {
 							theme: "dark",
 							height: 400
 						}
 					},
-					`gatsby-remark-prismjs`,
+					`gatsby-remark-prismjs`
 				]
 			}
 		},
