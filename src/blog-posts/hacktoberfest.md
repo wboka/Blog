@@ -1,5 +1,5 @@
 ---
-date: 2019-10-02T15:22:22-04:00
+date: 2019-10-02T19:22:22.000+00:00
 layout: post
 hero_image: "/images/logo-hf19-header-8245176fe235ab5d942c7580778a914110fa06a23c3d55bf40e2d061809d8785.svg"
 title: Hacktoberfest
@@ -9,7 +9,7 @@ categories:
 tags:
 - Learn X in Y Minutes (Language Edition)
 - Hacktoberfest
-draft: true
+draft: false
 
 ---
 It's that time of year again for Hacktoberfest, the annual event hosted from Digital Ocean!
