@@ -1,62 +1,119 @@
 module.exports = {
-	siteMetadata: {
-		title: `Boka's Solutions`
-	},
-	plugins: [
-		`gatsby-plugin-react-helmet`,
-		{
-			resolve: `gatsby-plugin-manifest`,
-			options: {
-				name: "Boka's Blog",
-				short_name: "Boka's Blog",
-				start_url: "/",
-				background_color: "#ffffff",
-				theme_color: "#2b4b7c",
-				display: "standalone",
-				icon: "src/images/wb.png",
-				legacy: true
-			}
-		},
-		`gatsby-plugin-offline`,
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				name: `src`,
-				path: `${__dirname}/src/`
-			}
-		},
-		{
-			resolve: "gatsby-plugin-rollbar",
-			options: {
-				accessToken: "5b782dd5b6dd4516a4aa9d2c31131c43",
-				captureUncaught: true,
-				captureUnhandledRejections: true,
-				payload: {
-					environment: "production"
-				}
-			}
-		},
-		{
-			resolve: "gatsby-transformer-remark",
-			options: {
-				plugins: [
+  siteMetadata: {
+    title: `Boka's Solutions`,
+    description: `Wayne Boka is your hometown website developer based in Westfield, Pa. Specializing in website development, social media marketing, and online presence management`,
+    siteUrl: `https://blog.bokasolutions.com`,
+    author: `Wayne Boka`
+  },
+  plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "@weknow/gatsby-remark-codepen",
+            options: {
+              theme: "dark",
+              height: 400
+            }
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              showLineNumbers: true
+            }
+          }
+        ]
+      }
+    },
+    `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Boka's Blog",
+        short_name: "Boka's Blog",
+        start_url: "/",
+        background_color: "#ffffff",
+        theme_color: "#2c7a7b",
+        display: "standalone",
+        icon: "src/images/wb.png",
+        legacy: true
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/images`,
+        name: "images"
+      }
+    },
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`
+      }
+    },
+    `gatsby-plugin-emotion`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
 					{
-						resolve: "@weknow/gatsby-remark-codepen",
-						options: {
-							theme: "dark",
-							height: 400
+						site {
+							siteMetadata {
+								title
+								description
+								author
+								siteUrl
+								site_url: siteUrl
+							}
 						}
-					},
-					`gatsby-remark-prismjs`
-				]
-			}
-		},
-		`gatsby-plugin-emotion`,
-		{
-			resolve: `gatsby-plugin-typography`,
-			options: {
-				pathToConfigModule: `src/utils/typography.js`
-			}
-		}
-	]
+					}
+				`,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  author: site.siteMetadata.author,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }]
+                });
+              });
+            },
+            query: `
+							{
+								allMarkdownRemark(
+									limit: 1000,
+									sort: { order: DESC, fields: [frontmatter___date] }
+								) {
+									edges {
+										node {
+											excerpt
+											html
+											fields { slug }
+											frontmatter {
+												title
+												date
+											}
+										}
+									}
+								}
+							}
+						`,
+            output: "/rss.xml",
+            title: "Wayne Boka's Blog RSS Feed"
+          }
+        ]
+      }
+    }
+  ]
 };

@@ -1,13 +1,12 @@
 import React from "react";
-import Header from "../components/header";
 import Layout from "../components/layout";
 import { graphql } from "gatsby";
 
-export default ({data}) => (
-	<Layout>
-		<Header headerText={data.site.siteMetadata.title} />
-		<p>No dice. Try again.</p>
-	</Layout>
+export default ({ data }) => (
+  <Layout>
+    <h2>{data.site.siteMetadata.title}</h2>
+    <p>Thanks for your submission!</p>
+  </Layout>
 );
 
 export const query = graphql`
@@ -18,4 +17,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

@@ -1,11 +1,16 @@
 ---
 layout: post
-title: "ColdFusion isDate() Validation Quirks"
-date: '2018-12-18'
-categories: [web-development]
-tags: [date, validation, coldfusion, post-mortem]
----
+title: ColdFusion isDate() Validation Quirks
+date: 2018-12-18
+categories:
+- Web Development
+tags:
+- date
+- validation
+- coldfusion
+- post-mortem
 
+---
 Hello all!
 
 I ran into yet another interesting situation with dates yesterday. We had a user enter a floating point number that was passed to a general use function that mapped to table columns in a database.

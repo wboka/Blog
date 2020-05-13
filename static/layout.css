@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Boogaloo|Nunito&display=swap');
+
+@tailwind base;
+
+@tailwind components;
+
+html,
+body {
+	font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p,
+ul,
+ol {
+	@apply py-2;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Boogaloo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+	@apply text-4xl;
+}
+
+h2 {
+	@apply text-3xl;
+}
+
+h3 {
+	@apply text-2xl;
+}
+
+ul {
+	@apply list-disc ml-5;
+}
+
+ol {
+	@apply list-decimal ml-5;
+}
+
+blockquote {
+	@apply ml-6 my-4 border-l-4 border-teal-500 p-4 bg-teal-200 shadow-md rounded-r-lg;
+}
+
+.gatsby-highlight {
+	@apply shadow-lg;
+}
+
+.blog-post-link {
+	@apply bg-teal-900;
+}
+
+.blog-post-link:hover a > * {
+	background: none;
+	@apply text-white;
+}
+
+a:not(.no-hover):hover {
+	@apply underline;
+}
+
+a:hover, a:focus, .lift:hover, .lift:focus {
+	transform: translateY(-0.25em);
+	transition: 0.25s;
+}
+
+.blog-post a {
+	@apply border-b-4 border-blue-600 m-1 inline-block rounded px-2 pt-2;
+}
+
+.blog-post a[target='_blank']:after {
+	content: ' (Opens in a new window)';
+}
+
+.blog-post a:hover {
+	@apply border-b-4 border-blue-600 bg-blue-600 text-white no-underline shadow-md;
+}
+
+@screen md {
+	h1 {
+		@apply text-4xl;
+	}
+
+	h2 {
+		@apply text-3xl;
+	}
+
+	h3 {
+		@apply text-2xl;
+	}
+}
+
+:focus {
+	@apply block;
+}
+
+@tailwind utilities;
+
+/**
+ * Add back the container background-color, border-radius, padding, margin
+ * and overflow that we removed from <pre>.
+ */
+.gatsby-highlight {
+	background-color: #fdf6e3;
+	border-radius: 0.3em;
+	margin: 0.5em 0;
+	padding: 1em;
+	overflow: auto;
+}
+
+/**
+ * Remove the default PrismJS theme background-color, border-radius, margin,
+ * padding and overflow.
+ * 1. Make the element just wide enough to fit its content.
+ * 2. Always fill the visible space in .gatsby-highlight.
+ * 3. Adjust the position of the line numbers
+ */
+.gatsby-highlight pre[class*='language-'] {
+	background-color: transparent;
+	margin: 0;
+	padding: 0;
+	overflow: initial;
+	float: left; /* 1 */
+	min-width: 100%; /* 2 */
+}
+
+.gatsby-highlight pre[class*='language-'].line-numbers {
+	padding-left: 2.8em; /* 3 */
+}

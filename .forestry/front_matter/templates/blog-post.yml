@@ -1,0 +1,49 @@
+---
+label: Blog Post
+hide_body: false
+display_field: title
+fields:
+- name: hero_image
+  type: file
+  config:
+    maxSize: 250
+  label: Hero Image
+  description: Image for the top of the article
+- type: text
+  name: title
+  label: title
+  config:
+    required: true
+- type: datetime
+  name: date
+  label: date
+  default: now
+  config:
+    required: true
+- type: list
+  name: categories
+  label: categories
+  config:
+    use_select: false
+    min: '1'
+- type: list
+  name: tags
+  label: tags
+  config:
+    min: '1'
+- type: text
+  name: layout
+  label: layout
+  default: post
+  hidden: true
+pages:
+- src/blog-posts/another-successful-hacktoberfest.md
+- src/blog-posts/blog-posts-manually-testing-new-features.md
+- src/blog-posts/blog-posts-new-rss-atom-feed.md
+- src/blog-posts/coldfusion-isdate-quirks.md
+- src/blog-posts/hacktoberfest.md
+- src/blog-posts/hello-from-forestry.md
+- src/blog-posts/introducing-cyber-security-a-new-series.md
+- src/blog-posts/js-date-validation.md
+- src/blog-posts/let-s-make-a-donut-in-blender.md
+- src/blog-posts/small-table-big-information.md
