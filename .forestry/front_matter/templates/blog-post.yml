@@ -38,9 +38,9 @@ fields:
   hidden: true
 - name: draft
   type: boolean
-  label: Draft
   description: Drafts are not created as pages.
   default: true
+  label: Is Draft?
 pages:
 - src/blog-posts/another-successful-hacktoberfest.md
 - src/blog-posts/blog-posts-manually-testing-new-features.md
