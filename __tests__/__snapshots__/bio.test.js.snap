@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bio renders correctly 1`] = `
+<div
+  className="hello"
+>
+  <img
+    alt="Headshot of Wayne Boka, Web Developer"
+    className="rounded-full w-1/2 sm:w-1/4 my-2 mx-auto shadow-lg"
+    onClick={[Function]}
+    onTouch={[Function]}
+    src="test-file-stub"
+  />
+  <p>
+    Hello! My name is Wayne and I am a website developer based out of Westfield, PA. I have been building websites and web applications since 2011.
+     
+    <a
+      className="border-b-4 border-blue-500 hover:bg-blue-500 px-2 pt-2 no-hover rounded inline-block"
+      href="https://m.me/bokasolutions"
+    >
+      Send me a Facebook message
+    </a>
+     
+    or
+     
+    <a
+      className="border-b-4 border-blue-500 hover:bg-blue-500 px-2 pt-2 no-hover rounded inline-block"
+      href="mailto:wayne@bokasolutions.com"
+    >
+      email me
+    </a>
+     
+    to discuss how I can help build your online presence.
+  </p>
+</div>
+`;

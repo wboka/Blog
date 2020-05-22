@@ -11,7 +11,7 @@
 		"build": "gatsby build",
 		"bs": "gatsby build && gatsby serve",
 		"serve": "gatsby serve",
-		"test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+		"test": "jest",
 		"now-build": "yarn build"
 	},
 	"dependencies": {
@@ -45,8 +45,13 @@
 		"url": "https://github.com/wboka/blog/issues"
 	},
 	"devDependencies": {
+		"babel-jest": "^26.0.1",
+		"babel-preset-gatsby": "^0.4.7",
 		"eslint-plugin-react": "^7.12.4",
+		"identity-obj-proxy": "^3.0.0",
+		"jest": "^26.0.1",
 		"prettier": "^1.16.4",
+		"react-test-renderer": "^16.13.1",
 		"tailwindcss": "^1.0.5"
 	},
 	"resolutions": {
