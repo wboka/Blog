@@ -7,7 +7,7 @@
 	"scripts": {
 		"dev": "nuxt",
 		"format": "prettier --write \"**/*.{js,css}\"",
-		"now-build": "yarn build",
+		"now-build": "yarn generate",
 		"build": "nuxt build",
 		"generate": "nuxt generate",
 		"start": "nuxt start"
