@@ -12,9 +12,7 @@
 					h1 An error occurred
 					p
 						| I&apos;m not sure what but something&apos;s not right. Please try refreshing
-						| the page or
-						|
-						nuxt-link(to='/contact') contact me
+						| the page
 			.w-full(class='sm:w-1/2 md:w-1/3')
 				Cat
 		nuxt-link(to='/') Home page
