@@ -38,3 +38,13 @@
 					li Vue
 					li Bootstrap
 </template>
+
+<script>
+export default {
+	name: 'About',
+	head: {
+		title: 'About'
+	},
+	layout: 'post'
+}
+</script>

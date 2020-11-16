@@ -12,9 +12,7 @@ export default {
 			content: process.env.npm_package_description || '',
 		},
 	],
-	link: [
-		{ rel: 'icon', type: 'image/png', href: '/images/wb.png' },
-	],
+	link: [{ rel: 'icon', type: 'image/png', href: '/images/wb.png' }],
 	modules: ['@nuxt/content'],
 	buildModules: [
 		'@nuxtjs/tailwindcss',
@@ -28,8 +26,13 @@ export default {
 				},
 			},
 		],
-		'@nuxtjs/pwa'
+		'@nuxtjs/sitemap',
+		'@nuxtjs/pwa',
 	],
 	css: [],
 	components: true,
+	sitemap: {
+    hostname: 'https://blog.bokasolutions.com',
+		gzip: true
+	}
 };

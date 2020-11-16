@@ -13,7 +13,10 @@
 		"start": "nuxt start"
 	},
 	"dependencies": {
+		"@fortawesome/fontawesome-free": "^5.15.1",
 		"@nuxt/content": "^1.10.0",
+		"@nuxtjs/sitemap": "^2.4.0",
+		"date-fns": "^2.16.1",
 		"nuxt": "^2.14.7"
 	},
 	"repository": {

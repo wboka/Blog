@@ -16,7 +16,7 @@
 						|
 						nuxt-link(to='/contact') contact me
 			.w-full(class='sm:w-1/2 md:w-1/3')
-				cat
+				Cat
 		nuxt-link(to='/') Home page
 </template>
 

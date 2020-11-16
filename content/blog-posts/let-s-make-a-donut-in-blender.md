@@ -1,7 +1,7 @@
 ---
 date: 2020-04-29T12:41:58-04:00
 layout: post
-hero_image: ''
+hero_image: '/images/donut-v3.png'
 title: Let's Make a Donut in Blender
 categories:
 - 3D Models
