@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import Tag from '~/components/svg/Tag'
+import Tag from '~/components/svg/tag'
 
 export default {
 	name: 'CategoryIndex',
