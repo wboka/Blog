@@ -11,6 +11,7 @@ tags:
 - SweetAlert
 - data
 draft: false
+hero_image: "/images/55ed354f-6742-4c53-b0b1-8b2365c2f0c1.jpeg"
 
 ---
 Hello all!
