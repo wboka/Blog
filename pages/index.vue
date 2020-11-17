@@ -29,7 +29,7 @@
 
 						p.text-gray-600.mb-4(v-if="latestPost.summary") {{ latestPost.summary }}
 
-						nuxt-link.inline-block.px-6.py-3.mt-2.rounded-md.bg-teal-700.text-gray-100(:to="`/posts/${latestPost.slug}`") Read More
+						nuxt-link.inline-block.px-6.py-3.mt-2.rounded-md.bg-teal-700.text-gray-100(:to="`/posts/${latestPost.slug}`") Read Blog Post
 
 			.w-full(class='sm:w-2/5')
 				h2 Latest Posts
@@ -47,7 +47,7 @@
 
 							p.block.p-2.pl-0.pt-1.text-sm.text-gray-600(class='md:hidden' v-if="p.summary") {{ p.summary }}
 
-							nuxt-link.inline-block.px-3.py-1.mt-2.rounded-md.bg-teal-700.text-gray-100(:to="`/posts/${p.slug}`") Read More
+							nuxt-link.inline-block.px-3.py-1.mt-2.rounded-md.bg-teal-700.text-gray-100(:to="`/posts/${p.slug}`") Read Blog Post
 
 		h2 More Posts
 
@@ -65,7 +65,7 @@
 
 						p.block.p-2.pl-0.pt-1.text-sm.text-gray-600(class='md:hidden' v-if="p.summary") {{ p.summary }}
 
-						nuxt-link.inline-block.px-3.py-1.mt-2.rounded-md.bg-teal-700.text-gray-100(:to="`/posts/${p.slug}`") Read More
+						nuxt-link.inline-block.px-3.py-1.mt-2.rounded-md.bg-teal-700.text-gray-100(:to="`/posts/${p.slug}`") Read Blog Post
 </template>
 
 <script>
