@@ -1,7 +1,7 @@
 ---
-date: 2020-04-29T12:41:58-04:00
+date: 2020-04-29T12:41:58.000-04:00
 layout: post
-hero_image: '/images/donut-v3.png'
+hero_image: "/images/8a6fa18d-928d-422f-992a-aefd97d48e25.png"
 title: Let's Make a Donut in Blender
 categories:
 - 3D Models
