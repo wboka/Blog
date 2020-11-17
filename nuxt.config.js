@@ -37,6 +37,7 @@ export default {
   sitemap: {
     hostname: "https://blog.bokasolutions.com",
     gzip: true,
+		xslUrl: 'sitemap.xsl',
   },
 	pwa: {
 		meta: {
