@@ -10,6 +10,7 @@ tags:
 - coldfusion
 - post-mortem
 draft: false
+hero_image: "/images/8a28753e-7abf-42da-9453-4a93e07e4a51.png"
 
 ---
 Hello all!
