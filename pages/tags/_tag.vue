@@ -10,7 +10,7 @@
 				.card.mx-2
 					img.block.rounded-t-md.m-4(v-if='p.hero_image' :src='p.hero_image' class='md:max-w-full md:max-h-32 md:m-0')
 
-					.w-full.h-32.bg-gradient-to-bl.from-teal-800.to-teal-600.rounded-t-md.max-w-xs(v-else)
+					.w-full.h-32.bg-gradient-to-bl.from-teal-800.to-teal-600.rounded-t-md(v-else)
 
 					.content
 						span.text-teal-700.text-sm.hidden.uppercase(class='md:block') {{ p.categories.join(' / ') }}

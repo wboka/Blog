@@ -56,7 +56,7 @@
 				.card.mx-2
 					img.rounded-t-md.m-0.mx-auto.w-full(v-if='p.hero_image' :src='p.hero_image' class='md:my-0')
 
-					.w-full.h-32.bg-gradient-to-bl.from-teal-800.to-teal-600.rounded-t-md.max-w-xs(v-else)
+					.w-full.h-32.bg-gradient-to-bl.from-teal-800.to-teal-600.rounded-t-md(v-else)
 
 					.content
 						span.text-teal-700.text-sm.hidden.uppercase(class='md:block') {{ p.categories.join(' / ') }}
