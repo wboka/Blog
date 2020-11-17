@@ -14,7 +14,10 @@ export default {
     },
   ],
   link: [{ rel: "icon", type: "image/png", href: "/images/wb.png" }],
-  modules: ["@nuxt/content"],
+  modules: [
+		"@nuxt/content",
+		"@nuxtjs/sitemap",
+	],
   buildModules: [
     "@nuxtjs/tailwindcss",
     [
@@ -27,7 +30,6 @@ export default {
         },
       },
     ],
-    "@nuxtjs/sitemap",
     "@nuxtjs/pwa",
   ],
   css: [],
