@@ -2,8 +2,8 @@
 	div
 		h1 {{ post.title }}
 
-		p.text-gray-500 Post Date: {{ formatRelative(new Date(post.date), today) }}
-		p.text-gray-500 Last Updated: {{ formatRelative(new Date(post.updatedAt), today) }}
+		p.text-gray-700 Post Date: {{ formatRelative(new Date(post.date), today) }}
+		p.text-gray-700 Last Updated: {{ formatRelative(new Date(post.updatedAt), today) }}
 
 		.flex.flex-wrap
 			nuxt-link.mr-2.mb-2.bg-teal-600.text-white.p-2.rounded.leading-none.flex.items-center.shadow-md(:to="`/categories/${encodeURIComponent(t)}`" class='md:block hover:shadow-lg' v-for="(t, i) in post.categories" :key="`tag-${i}`")
