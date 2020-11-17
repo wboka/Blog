@@ -11,7 +11,7 @@
 				|
 				| {{ t }}
 
-		img.rounded-md.object-cover.w-full.h-64.shadow-lg(v-if="post.hero_image" :src="post.hero_image")
+		img.rounded-md.w-full.shadow-lg(v-if="post.hero_image" :src="post.hero_image")
 
 		.w-full.h-48.bg-gradient-to-bl.from-teal-800.to-teal-600.rounded-md(v-else)
 
