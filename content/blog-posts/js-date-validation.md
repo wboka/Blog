@@ -10,6 +10,7 @@ tags:
 - validation
 - post-mortem
 draft: false
+hero_image: "/images/e297b801-2325-4111-96c5-8565a4abd868.png"
 
 ---
 Hello all!
