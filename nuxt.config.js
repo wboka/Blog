@@ -36,4 +36,9 @@ export default {
     hostname: "https://blog.bokasolutions.com",
     gzip: true,
   },
+	pwa: {
+		meta: {
+			theme_color: "#2c7a7b",
+		}
+	},
 };
