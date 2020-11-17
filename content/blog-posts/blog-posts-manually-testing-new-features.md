@@ -8,6 +8,7 @@ tags:
 date: 2019-07-23T17:00:52.704+00:00
 title: Manually Testing New Widgets
 draft: false
+hero_image: "/images/9c796141-b7ab-4114-93f0-39f130ff076c.jpeg"
 
 ---
 A brief primer in user testing. In this article, a _Widget_ refers to anything you want it to. A _Widget_ could be a product, feature, service, or whatever else needs testing.
