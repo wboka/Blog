@@ -11,7 +11,7 @@
 				|
 				| {{ t }}
 
-		img.rounded-md.w-full.shadow-lg(v-if="post.hero_image" :src="post.hero_image")
+		img.rounded-md.max-w-full.object-cover.mx-auto(v-if="post.hero_image" :src="post.hero_image" class="sm:max-w-sm md:max-w-md lg:max-w-lg")
 
 		.w-full.h-48.bg-gradient-to-bl.from-teal-800.to-teal-600.rounded-md(v-else)
 
@@ -22,35 +22,69 @@
 				Hashtag.w-4.h-4
 				|
 				| {{ t }}
+
+		hr
+
+		h2 More Posts
+
+		//- pre {{ morePosts }}
+
+		.flex.flex-wrap
+			.w-full(class="sm:w-1/2" v-for="(p, i) in morePosts" :key="`more-posts-${i}`" v-if="p")
+				.m-4
+					PostCard(:post="p")
+
+		//- .flex.flex-wrap
+		//- 	.w-full(class="sm:w-1/2")
+		//- 		.my-4
+		//- 			nuxt-link(v-if="prev" :to="`/posts/${prev.slug}`") {{ prev.title }}
+
+		//- 	.w-full(class="sm:w-1/2 sm:text-right")
+		//- 		.my-4
+		//- 			nuxt-link(v-if="next" :to="`/posts/${next.slug}`") {{ next.title }}
 </template>
 
 <script>
-import { formatRelative } from 'date-fns';
-import Hashtag from '~/components/svg/hashtag'
-import Tag from '~/components/svg/tag'
+import { formatRelative } from "date-fns";
+import Hashtag from "~/components/svg/hashtag";
+import Tag from "~/components/svg/tag";
+import PostCard from "~/components/PostCard"
 
 export default {
-	name: 'BlogPost',
-	layout: 'post',
+	name: "BlogPost",
+	layout: "post",
 	head() {
 		return {
 			title: this.post.title,
-		}
+		};
 	},
 	components: {
 		Hashtag,
-		Tag
+		PostCard,
+		Tag,
 	},
 	data() {
 		return {
 			formatRelative,
 			today: new Date(),
-		}
+		};
 	},
-	async asyncData({ $content, params }) {
-		const post = await $content('blog-posts', params.slug).fetch();
+	async asyncData({ $content, params, error }) {
+		const post = await $content("blog-posts", params.slug)
+			.fetch()
+			.catch((err) => {
+				error({ statusCode: 404, message: "Page not found" });
+			});
+		const morePosts = await $content("blog-posts")
+			.sortBy("date")
+			.surround(params.slug, {
+				before: 5,
+				after: 5
+			})
+			.fetch();
 
 		return {
+			morePosts,
 			post,
 		};
 	},

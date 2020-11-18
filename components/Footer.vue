@@ -1,6 +1,6 @@
 <template lang="pug">
 	div
-		hr.h-1.bg-teal-600.m-4.rounded.shadow
+		hr
 
 		.text-center
 			ul.list-none

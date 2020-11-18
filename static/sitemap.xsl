@@ -3,7 +3,7 @@
 	<xsl:template match="/">
 		<html>
 			<head>
-				<title>Sitemap - Wayne Boka, Web Developer</title>
+				<title>Sitemap - Wayne Boka's Blog</title>
 				<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 				<style type="text/css">
 					body, html {
@@ -14,7 +14,7 @@
 			<body>
 				<h2>Sitemap</h2>
 				<p>
-					You can use our sitemap to easily navigate to any section of our website.
+					You can use this sitemap to easily navigate to any section of this website.
 					If you still cannot find the information you need don't hesitate to <a href="https://m.me/bokasolutions">message</a> or <a href="mailto:wayne@bokasolutions.com">email</a> me.
 				</p>
 				<ol>

@@ -8,7 +8,7 @@
 		.flex.flex-wrap
 			.w-full.mb-10(class='sm:w-1/2 md:w-1/3 lg:w-1/4' v-for="(p, i) in posts" :key="`all-posts-${i}`")
 				.card.mx-2
-					img.block.rounded-t-md.m-4(v-if='p.hero_image' :src='p.hero_image' class='md:max-w-full md:max-h-32 md:m-0')
+					img.block.rounded-t-md(v-if='p.hero_image' :src='p.hero_image')
 
 					.w-full.h-32.bg-gradient-to-bl.from-teal-800.to-teal-600.rounded-t-md(v-else)
 

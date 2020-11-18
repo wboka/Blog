@@ -4,9 +4,9 @@
 
 body,
 html {
-  font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 16px;
+	font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	font-size: 16px;
 }
 
 h1,
@@ -16,8 +16,8 @@ h4,
 h5,
 h6,
 .brand-name {
-  font-family: "Boogaloo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	font-family: "Boogaloo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 h1,
@@ -29,90 +29,94 @@ h6,
 p,
 ul,
 li {
-  @apply .my-2;
+	@apply .my-2;
 }
 
 h1 {
-  @apply .text-3xl;
+	@apply .text-3xl;
 }
 h2 {
-  @apply .text-2xl;
+	@apply .text-2xl;
 }
 h3 {
-  @apply .text-xl;
+	@apply .text-xl;
 }
 h4 {
-  @apply .text-lg;
+	@apply .text-lg;
 }
 
 a {
-  @apply .italic .border-b-2 .border-teal-500;
+	@apply .italic .border-b-2 .border-teal-500;
 }
 
 ul {
-  @apply .list-disc .ml-5;
+	@apply .list-disc .ml-5;
 }
 
 ol {
-  @apply .list-decimal .ml-5;
+	@apply .list-decimal .ml-5;
 }
 
 a.navbar-link {
-  @apply .block .text-white .no-underline .border-0 .p-2 .uppercase .not-italic;
+	@apply .block .text-white .no-underline .border-0 .p-2 .uppercase .not-italic;
 }
 
 a.navbar-link:hover {
-  @apply .border-b-2 .border-yellow-500;
+	@apply .border-b-2 .border-yellow-500;
+}
+
+hr {
+	@apply .h-1 .bg-teal-600 .m-4 .rounded .shadow;
 }
 
 @screen sm {
-  h1 {
-    @apply .text-4xl;
-  }
+	h1 {
+		@apply .text-4xl;
+	}
 
-  h2 {
-    @apply .text-3xl;
-  }
+	h2 {
+		@apply .text-3xl;
+	}
 
-  h3 {
-    @apply .text-2xl;
-  }
+	h3 {
+		@apply .text-2xl;
+	}
 
-  h4 {
-    @apply .text-xl;
-  }
+	h4 {
+		@apply .text-xl;
+	}
 
-  a.navbar-link {
-    @apply .inline-block .mt-0;
-  }
+	a.navbar-link {
+		@apply .inline-block .mt-0;
+	}
 
-  a.navbar-link.nuxt-link-exact-active {
-    @apply .border-b-2 .border-white;
-  }
+	a.navbar-link.nuxt-link-exact-active {
+		@apply .border-b-2 .border-white;
+	}
 }
 
 @screen md {
-  h1 {
-    @apply .text-5xl;
-  }
+	h1 {
+		@apply .text-5xl;
+	}
 
-  h2 {
-    @apply .text-4xl;
-  }
+	h2 {
+		@apply .text-4xl;
+	}
 
-  h3 {
-    @apply .text-3xl;
-  }
+	h3 {
+		@apply .text-3xl;
+	}
 
-  h4 {
-    @apply .text-2xl;
-  }
+	h4 {
+		@apply .text-2xl;
+	}
 }
 
 .card {
-  @apply .bg-gray-200 .rounded .shadow-md;
+	@apply .bg-gray-200 .rounded .shadow-md;
 }
 
 .card .content {
-  @apply .px-4 .py-2;
+	@apply .px-4 .py-2;
 }
