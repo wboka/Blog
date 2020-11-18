@@ -41,3 +41,5 @@ fields:
   description: Drafts are not created as pages.
   default: true
   label: Is Draft?
+pages:
+- content/blog-posts/drafts/the-holidays.md
