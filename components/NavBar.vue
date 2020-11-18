@@ -10,6 +10,8 @@
 		#menu-items.w-full.fade.flex-grow.block(class='sm:flex sm:items-center sm:w-auto' :class='{ hidden: !showMenu, block: showMenu }')
 			.text-sm.text-center(class='sm:flex-grow sm:text-right')
 				nuxt-link.navbar-link(to='/' title='Home') Home
+				nuxt-link.navbar-link(to='/categories' title='Categories') Categories
+				nuxt-link.navbar-link(to='/tags' title='Tags') Tags
 				nuxt-link.navbar-link(to='/about' title='About') About
 </template>
 
