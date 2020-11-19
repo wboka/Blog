@@ -41,5 +41,15 @@ fields:
   description: Drafts are not created as pages.
   default: true
   label: Is Draft?
+- name: updatedAt
+  type: datetime
+  label: Updated At
+  description: When was this page last updated?
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
 pages:
 - content/blog-posts/drafts/the-holidays.md
