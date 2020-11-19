@@ -1,5 +1,5 @@
 ---
-date: 2020-11-18T20:44:24Z
+date: 2020-11-18T20:44:24.000+00:00
 layout: post
 draft: true
 hero_image: ''
@@ -10,6 +10,7 @@ categories:
 tags:
 - Community
 - All for one, one for all
+updatedAt: 2020-11-19T05:00:00Z
 
 ---
 # Sacrifice
@@ -18,4 +19,4 @@ In the coming weeks and months, we are going to be facing some tough decisions. 
 
 We will come out of this at some point. It's not a matter of if but when. Some families will be forever changed. Few will be lucky enough enough to have been stable throughout this ordeal. At the time of writing this my home state of Pennsylvania has lost 9,465 people due to COVID-19 related symptoms. Cameron and Sullivan County is Pennsylvania have an estimated combined population of 10,169. Forest County has an estimated population of 7,215. Imagine if they were just gone. Nationally, if the people who have died from COVID-19 related symptoms so far they would be the 90th most populated city in the USA. Just trailing North Las Vegas, Nevada.
 
-Our nation’s health and security are at stake. Take this seriously. Everyone. We are being asked to wear masks, avoid gatherings, wash our hands, cover our mouths when sneeze and cough, and keep spacing. This is not the hard part. This is not some crazy conspiracy. This is a health crisis. Do it for our country. This virus has lasting effects for people that leads to heart and lung problems. Imagine an entire country with that problem, good luck defending it. 
+Our nation’s health and security are at stake. Take this seriously. Everyone. We are being asked to wear masks, avoid gatherings, wash our hands, cover our mouths when sneeze and cough, and keep spacing. This is not the hard part. This is not some crazy conspiracy. This is a health crisis. Do it for our country. This virus has lasting effects for people that leads to heart and lung problems. Imagine an entire country with that problem, good luck defending it.
