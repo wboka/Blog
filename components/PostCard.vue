@@ -8,13 +8,18 @@
 			span.text-teal-700.text-sm.hidden.uppercase(class='md:block') {{ post.categories.join(' / ') }}
 
 			.text-gray-800.font-semibold.text-xl.mb-2(class='md:mt-0') {{ post.title }}
+			
+			p.text-gray-700 Post Date: {{ formatRelative(new Date(post.date), today) }}
+			p.text-gray-700 Last Updated: {{ formatRelative(new Date(post.updatedAt), today) }}
 
-			post.block.p-2.pl-0.pt-1.text-sm.text-gray-600(class='md:hidden' v-if="post.summary") {{ post.summary }}
+			p.block.p-2.pl-0.pt-1.text-md.text-gray-700(v-if="post.summary") {{ post.summary }}
 
 			nuxt-link.inline-block.px-3.py-1.mt-2.rounded-md.bg-teal-700.text-gray-100(:to="`/posts/${post.slug}`") Read Blog Post
 </template>
 
 <script>
+import { formatRelative } from "date-fns";
+
 export default {
 	name: "PostCard",
 	props: {
@@ -24,6 +29,12 @@ export default {
 				return {};
 			},
 		},
+	},
+	data() {
+		return {
+			formatRelative,
+			today: new Date(),
+		};
 	},
 };
 </script>
