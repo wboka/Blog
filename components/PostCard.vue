@@ -8,9 +8,8 @@
 			span.text-teal-700.text-sm.hidden.uppercase(class='md:block') {{ post.categories.join(' / ') }}
 
 			.text-gray-800.font-semibold.text-xl.mb-2(class='md:mt-0') {{ post.title }}
-			
-			p.text-gray-700 Post Date: {{ formatRelative(new Date(post.date), today) }}
-			p.text-gray-700 Last Updated: {{ formatRelative(new Date(post.updatedAt), today) }}
+
+			p.text-gray-700.italic Published on {{ formatRelative(new Date(post.date), today) }}
 
 			p.block.p-2.pl-0.pt-1.text-md.text-gray-700(v-if="post.summary") {{ post.summary }}
 

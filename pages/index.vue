@@ -27,6 +27,8 @@
 
 						h1.text-gray-800.text-4xl.font-bold.mt-2.mb-2.leading-tight {{ latestPost.title }}
 
+						p.text-gray-700.italic Published on {{ formatRelative(new Date(latestPost.date), today) }}
+
 						p.text-gray-600.mb-4(v-if="latestPost.summary") {{ latestPost.summary }}
 
 						nuxt-link.inline-block.px-6.py-3.mt-2.rounded-md.bg-teal-700.text-gray-100(:to="`/posts/${latestPost.slug}`") Read Blog Post
@@ -35,55 +37,44 @@
 				h2 Latest Posts
 
 				.rounded.w-full.flex.flex-col.mb-10(v-for="(p, i) in lastPosts" :key="`last-5-posts-${i}`")
-					.card.w-full
-						img.rounded-t-md.m-0.mx-auto.w-full(v-if='p.hero_image' :src='p.hero_image' class='md:my-0')
-
-						.w-full.h-32.bg-gradient-to-bl.from-teal-800.to-teal-600.rounded-t-md(v-else)
-
-						.content.px-4
-							span.text-teal-700.text-sm.hidden.uppercase(class='md:block') {{ p.categories.join(' / ') }}
-
-							.text-gray-800.font-semibold.text-xl.mb-2(class='md:mt-0') {{ p.title }}
-
-							p.block.p-2.pl-0.pt-1.text-sm.text-gray-600(class='md:hidden' v-if="p.summary") {{ p.summary }}
-
-							nuxt-link.inline-block.px-3.py-1.mt-2.rounded-md.bg-teal-700.text-gray-100(:to="`/posts/${p.slug}`") Read Blog Post
+					PostCard(:post="p")
 
 		h2 More Posts
 
 		.flex.flex-wrap
 			.w-full.mb-10(class='sm:w-1/2 md:w-1/3 lg:w-1/4' v-for="(p, i) in posts" :key="`all-posts-${i}`")
-				.card.mx-2
-					img.rounded-t-md.m-0.mx-auto.w-full(v-if='p.hero_image' :src='p.hero_image' class='md:my-0')
-
-					.w-full.h-32.bg-gradient-to-bl.from-teal-800.to-teal-600.rounded-t-md(v-else)
-
-					.content
-						span.text-teal-700.text-sm.hidden.uppercase(class='md:block') {{ p.categories.join(' / ') }}
-
-						.text-gray-800.font-semibold.text-xl.mb-2(class='md:mt-0') {{ p.title }}
-
-						p.block.p-2.pl-0.pt-1.text-sm.text-gray-600(class='md:hidden' v-if="p.summary") {{ p.summary }}
-
-						nuxt-link.inline-block.px-3.py-1.mt-2.rounded-md.bg-teal-700.text-gray-100(:to="`/posts/${p.slug}`") Read Blog Post
+				.m-2
+					PostCard(:post="p")
 </template>
 
 <script>
+import { formatRelative } from "date-fns";
+import PostCard from "~/components/PostCard";
+
 export default {
 	name: "BlogIndex",
+	components: {
+		PostCard,
+	},
 	head: {
 		title: "Home",
 	},
+	data() {
+		return {
+			formatRelative,
+			today: new Date(),
+		};
+	},
 	async asyncData({ $content }) {
-		const posts = await $content('blog-posts').sortBy('date', 'desc').fetch();
+		const posts = await $content("blog-posts").sortBy("date", "desc").fetch();
 		const latestPost = posts.shift();
 		const lastPosts = posts.splice(0, 3);
 
 		return {
 			lastPosts,
 			latestPost,
-			posts
+			posts,
 		};
-	}
-}
+	},
+};
 </script>
