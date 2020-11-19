@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Small Table, Big Information
-date: 2018-12-11
+date: 2018-12-11T05:00:00Z
 categories:
 - Web Development
 tags:
@@ -12,6 +12,7 @@ tags:
 - data
 draft: false
 hero_image: "/images/55ed354f-6742-4c53-b0b1-8b2365c2f0c1.jpeg"
+updatedAt: 2018-12-11T05:00:00Z
 
 ---
 Hello all!
