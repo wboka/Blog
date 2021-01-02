@@ -61,7 +61,7 @@ export default {
 		};
 	},
 	async asyncData({ $content }) {
-		const posts = await $content("blog-posts").sortBy("date", "desc").fetch();
+		const posts = await $content("blog-posts").where({ draft: false }).sortBy("date", "desc").fetch();
 		const latestPost = posts.shift();
 		const lastPosts = posts.splice(0, 3);
 

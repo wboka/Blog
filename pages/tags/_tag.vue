@@ -30,10 +30,13 @@ export default {
 	},
 	async asyncData({ $content, params }) {
 		const posts = await $content('blog-posts').where({
+			draft: false,
 			tags: {
 				$contains: params.tag,
 			},
-		}).fetch();
+		})
+		.sortBy("date", "desc")
+		.fetch();
 
 		return {
 			tag: params.tag,

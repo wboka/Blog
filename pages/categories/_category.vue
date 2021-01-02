@@ -14,11 +14,11 @@
 </template>
 
 <script>
-import PostCard from '~/components/PostCard'
-import Tag from '~/components/svg/tag'
+import PostCard from "~/components/PostCard";
+import Tag from "~/components/svg/tag";
 
 export default {
-	name: 'CategoryIndex',
+	name: "CategoryIndex",
 	head() {
 		return {
 			title: this.category,
@@ -26,19 +26,23 @@ export default {
 	},
 	components: {
 		PostCard,
-		Tag
+		Tag,
 	},
 	async asyncData({ $content, params }) {
-		const posts = await $content('blog-posts').where({
-			categories: {
-				$contains: params.category,
-			},
-		}).fetch();
+		const posts = await $content("blog-posts")
+			.where({
+				draft: false,
+				categories: {
+					$contains: params.category,
+				},
+			})
+			.sortBy("date", "desc")
+			.fetch();
 
 		return {
 			category: params.category,
-			posts
-		}
+			posts,
+		};
 	},
 };
 </script>

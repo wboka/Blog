@@ -14,7 +14,7 @@ export default {
 		title: "Tags"
 	},
 	async asyncData({ $content }) {
-		const posts = await $content('blog-posts').fetch();
+		const posts = await $content('blog-posts').where({ draft: false }).sortBy("date", "desc").fetch();
 
 		const tags = posts.map(p => p.tags).reduce((a, b) => a.concat(b)).filter((value, i, self) => self.indexOf(value) === i);
 

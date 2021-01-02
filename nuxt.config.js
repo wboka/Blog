@@ -37,7 +37,11 @@ export default {
 		routes: async () => {
 			const { $content } = require("@nuxt/content");
 
-			const posts = await $content("blog-posts").only(["slug"]).fetch();
+			const posts = await $content("blog-posts")
+				.where({ draft: false })
+				.only(["slug"])
+				.sortBy("date", "desc")
+				.fetch();
 
 			return posts.map((p) => `/posts/${p.slug}`);
 		},

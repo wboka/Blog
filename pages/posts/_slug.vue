@@ -71,16 +71,20 @@ export default {
 	},
 	async asyncData({ $content, params, error }) {
 		const post = await $content("blog-posts", params.slug)
+			.where({ draft: false })
+			.sortBy("date", "desc")
 			.fetch()
 			.catch((err) => {
 				error({ statusCode: 404, message: "Page not found" });
 			});
 		const morePosts = await $content("blog-posts")
+			.where({ draft: false })
 			.sortBy("date")
 			.surround(params.slug, {
 				before: 5,
 				after: 5
 			})
+			.sortBy("date", "desc")
 			.fetch();
 
 		return {
