@@ -1,7 +1,7 @@
 <template lang="pug">
 	main
-		.flex.flex-wrap.space-x-0.mb-16(class="md:space-x-6 md:flex-no-wrap")
-			.w-full.mb-4.relative.rounded.block(class="sm:w-3/5 lg:mb-0 lg:p-0")
+		.flex.flex-wrap.space-x-0.mb-4(class="md:space-x-6 md:flex-no-wrap")
+			.w-full.mb-4.px-2.rounded.block(class="sm:px-4 lg:w-2/5 lg:mb-0 lg:p-0")
 				h1.text-center Hello, My Name is Wayne Boka
 
 				img.rounded-full.shadow-xl.mx-auto(src="/images/wb-profile250.jpg")
@@ -17,27 +17,18 @@
 					|
 					| to discuss how I can help build your online presence.
 
-				.card
-					img.rounded-t-md.object-cover.w-full.h-64(v-if="latestPost.hero_image" :src="latestPost.hero_image")
+			.px-2.w-full(class='lg:w-3/5 sm:px-4')
+				PostCard(v-if="latestPost" :post="latestPost")
 
-					.w-full.h-48.bg-gradient-to-bl.from-teal-800.to-teal-600.rounded-t-md(v-else)
+		h2 Latest Posts
 
-					.content
-						span.text-teal-700.text-sm.hidden.mt-4.uppercase(class="md:block") {{ latestPost.categories.join(' / ') }}
+		.flex.flex-wrap
+			.w-full.mb-4(class="md:px-4 md:w-1/3" v-for="(p, i) in lastPosts" :key="`last-5-posts-${i}`")
+				PostCard(:post="p")
 
-						h1.text-gray-800.text-4xl.font-bold.mt-2.mb-2.leading-tight {{ latestPost.title }}
-
-						p.text-gray-700.italic Published on {{ formatRelative(new Date(latestPost.date), today) }}
-
-						p.text-gray-600.mb-4(v-if="latestPost.summary") {{ latestPost.summary }}
-
-						nuxt-link.inline-block.px-6.py-3.mt-2.rounded-md.bg-teal-700.text-gray-100(:to="`/posts/${latestPost.slug}`") Read Blog Post
-
-			.w-full(class='sm:w-2/5')
-				h2 Latest Posts
-
-				.rounded.w-full.flex.flex-col.mb-10(v-for="(p, i) in lastPosts" :key="`last-5-posts-${i}`")
-					PostCard(:post="p")
+		.card(v-if="lastPosts.length === 0")
+			.content
+				p.text-xl No more posts
 
 		h2 More Posts
 
@@ -45,6 +36,10 @@
 			.w-full.mb-10(class='sm:w-1/2 md:w-1/3 lg:w-1/4' v-for="(p, i) in posts" :key="`all-posts-${i}`")
 				.m-2
 					PostCard(:post="p")
+
+		.card(v-if="posts.length === 0")
+			.content
+				p.text-xl No more posts
 </template>
 
 <script>
