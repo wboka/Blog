@@ -1,7 +1,7 @@
 ---
 date: 2021-01-27T19:57:08Z
 layout: post
-draft: true
+draft: false
 updatedAt: 2021-01-27T19:57:08Z
 hero_image: "/images/jan-antonin-kolar-lrox0shwjuq-unsplash.jpg"
 title: Database Tables With Parent Columns
