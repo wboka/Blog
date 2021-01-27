@@ -20,8 +20,8 @@ h6,
 		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-code {
-	@apply .px-2 .py-1 .bg-gradient-to-br .from-teal-800 .to-teal-500 .text-white .rounded;
+blockquote {
+	@apply .border-l-4 .border-teal-800 .italic .shadow-md .px-6 .py-4 .bg-teal-200 .text-teal-800;
 }
 
 table {
@@ -32,7 +32,7 @@ table thead tr td {
 	@apply .p-2 .text-left .border-b-4 .border-teal-500;;	
 }
 
-table tbody tr td:nth-child(even) {
+table tbody tr:nth-child(even) td {
 	@apply .p-2 .bg-gray-300;;	
 }
 
