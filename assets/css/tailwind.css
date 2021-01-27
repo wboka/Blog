@@ -32,8 +32,12 @@ table thead tr td {
 	@apply .p-2 .text-left .border-b-4 .border-teal-500;;	
 }
 
+table tbody tr td {
+	@apply .p-2;	
+}
+
 table tbody tr:nth-child(even) td {
-	@apply .p-2 .bg-gray-300;;	
+	@apply .bg-gray-300;
 }
 
 h1,
