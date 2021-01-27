@@ -20,6 +20,22 @@ h6,
 		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+code {
+	@apply .px-2 .py-1 .bg-gradient-to-br .from-teal-800 .to-teal-500 .text-white .rounded;
+}
+
+table {
+	@apply .w-full;
+}
+
+table thead tr td {
+	@apply .p-2 .text-left .border-b-4 .border-teal-500;;	
+}
+
+table tbody tr td:nth-child(even) {
+	@apply .p-2 .bg-grey-300;;	
+}
+
 h1,
 h2,
 h3,
