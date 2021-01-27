@@ -19,6 +19,33 @@ tags:
 
 For security and liability reasons, I will be using generic data but the concepts still apply.
 
+## The Problem Query
+
+> The following would cause the record with a parent of themselves to not show up at all. This also lead to the parent record's children records not showing up either.
+
+```sql
+select
+  employee_id,
+  -- This column is used to provide indentation in an HTML select
+  lpad (
+    employee_name,
+    length (
+    employee_name
+    ) + (level - 1) * 2,
+    ' '
+  ) as display,
+  employee_name,
+  supervisor_id
+from
+  employees
+start with
+  coalesce(supervisor_id, -1) = -1
+connect by prior
+  employee_id = supervisor_id
+order siblings by
+  lower (employee_name) asc
+```
+
 ## The Data
 
 > Let's call this table `employees`
