@@ -1,10 +1,10 @@
 ---
-date: 2021-01-02T18:20:18Z
+date: 2021-01-02T18:20:18.000+00:00
 layout: post
-draft: true
-updatedAt: 2021-01-02T18:20:18Z
+draft: false
+updatedAt: 2021-01-02T18:20:18.000+00:00
 hero_image: "/images/visual-design-pl9drjamv6i-unsplash.jpg"
-hero_image_alt: "black ipad beside white ceramic mug on white table photo"
+hero_image_alt: black ipad beside white ceramic mug on white table photo
 title: New Year, New Website
 categories:
 - Web Development
@@ -14,6 +14,8 @@ tags:
 
 ---
 # New Year, New Website?
+
+Yes
 
 ## Photo Credit
 
