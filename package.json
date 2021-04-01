@@ -31,7 +31,7 @@
 		"@nuxtjs/pwa": "^3.2.2",
 		"@nuxtjs/tailwindcss": "^3.2.0",
 		"prettier": "^2.1.2",
-		"pug": "^3.0.0",
+		"pug": "^3.0.1",
 		"pug-plain-loader": "^1.0.0"
 	}
 }
