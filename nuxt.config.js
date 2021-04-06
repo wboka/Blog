@@ -1,3 +1,37 @@
+const createFeedItems = async function (feed, args) {
+	const [file] = args;
+
+	feed.options = {
+		title: `Boka's Solutions`,
+		link: `https://blog.bokasolutions.com/${file}`,
+		description: process.env.npm_package_description || "",
+	};
+
+	const { $content } = require("@nuxt/content");
+
+	const posts = await $content("blog-posts")
+		.where({ draft: false })
+		.sortBy("date", "desc")
+		.fetch();
+
+	posts.forEach(async (post) => {
+		feed.addItem({
+			title: post.title,
+			date: new Date(post.updatedAt),
+			id: post.slug,
+			link: `https://blog.bokasolutions.com/posts/${post.slug}`,
+		});
+	});
+
+	feed.addCategory("Web Development");
+
+	feed.addContributor({
+		name: "Wayne Boka",
+		email: "wayne+blog@bokasolutions.com",
+		link: "https://www.bokasolutions.com",
+	});
+}
+
 export default {
 	target: "static",
 	head: {
@@ -14,7 +48,7 @@ export default {
 		},
 	],
 	link: [{ rel: "icon", type: "image/png", href: "/images/wb.png" }],
-	modules: ["@nuxt/content", "@nuxtjs/sitemap"],
+	modules: ["@nuxt/content", "@nuxtjs/sitemap", "@nuxtjs/feed"],
 	buildModules: [
 		"@nuxtjs/tailwindcss",
 		[
@@ -47,6 +81,29 @@ export default {
 		},
 		xslUrl: "sitemap.xsl",
 	},
+	feed: [
+		{
+			path: "atom.xml",
+			create: createFeedItems,
+			cacheTime: 1000 * 60 * 15,
+			type: "atom1",
+			data: ['atom.xml']
+		},
+		{
+			path: "feed.json",
+			create: createFeedItems,
+			cacheTime: 1000 * 60 * 15,
+			type: "json1",
+			data: ['feed.json']
+		},
+		{
+			path: "rss.xml",
+			create: createFeedItems,
+			cacheTime: 1000 * 60 * 15,
+			type: "rss2",
+			data: ['rss.xml']
+		},
+	],
 	pwa: {
 		meta: {
 			theme_color: "#2c7a7b",

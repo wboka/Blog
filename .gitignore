@@ -56,6 +56,7 @@ typings/
 
 # nuxt files
 .nuxt/
+dist/
 
 # Mac files
 .DS_Store
