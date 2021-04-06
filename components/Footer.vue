@@ -13,6 +13,12 @@
 				li.inline-block.px-3.py-2
 					nuxt-link(to='/about' title='About') About
 				li.inline-block.px-3.py-2
+					a(href='/rss.xml') RSS
+				li.inline-block.px-3.py-2
+					a(href='/atom.xml') Atom
+				li.inline-block.px-3.py-2
+					a(href='/feed.json') JSON
+				li.inline-block.px-3.py-2
 					a(href='/sitemap.xml') Sitemap
 
 			p Website Development by
